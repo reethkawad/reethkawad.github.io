@@ -1,0 +1,837 @@
+REETH S. KAWAD
+
+Mechanical Engineering · USC  |  Controls · Robotics · Thermofluids · Instrumentation · Hardware Testing
+
+kawad@usc.edu  |  (213) 512-8528  |  LinkedIn  |  Portfolio
+
+ABOUT ME
+
+LinkedIn Headline Options
+
+Option A:  Mechanical Engineering @ USC | Controls · Robotics · Sensing | GrayMatter Robotics · Lumindt · Wind Energy
+
+Option B:  Hardware Engineer | Controls, Mechatronics & Thermofluids | Building systems that sense, actuate, and adapt
+
+Option C:  ME @ USC | Robotics Systems · Clean Energy · Instrumentation | Co-Founder FireWarden · $20K Prize Winner
+
+Short Bio (Portfolio About Page / LinkedIn Summary)
+
+I'm a Mechanical Engineering student at USC (GPA 3.6, May 2026) with a minor in AI Applications, focused on controls, mechatronics, robotics, and thermofluid systems. My work sits at the intersection of physical hardware and intelligent system behaviour — I design, build, instrument, and test systems that interact with the real world.
+
+I've built a transient hot-wire thermal conductivity system from scratch, designed a production-ready robotic sanding fixture spanning 14 SKUs, developed full electronics and controls for USC's first Collegiate Wind Competition turbine, and co-founded FireWarden — a wildfire mitigation startup that won $20K at InnovateLA and entered Techstars.
+
+I'm actively looking for roles in robotics, clean energy, industrial automation, and hardware-focused engineering — wherever rigorous first-principles thinking and hands-on experimentation create real-world impact.
+
+HOW TO USE THIS DOCUMENT
+
+This is your master career reference. Every experience and project is written in full STAR format with a skimmable S/T summary box and detailed Action + Result bullets. Use the table below to choose which entries to lead with for different role types.
+
+Role Type
+
+Lead With
+
+Support With
+
+Robotics / Autonomy
+
+GrayMatter (Fixture + SAE + DAQ), USC DRCL (8-DOF Hand + SEA)
+
+Formula SAE, USC Locomotion Lab
+
+Clean Energy / Climate
+
+USC Wind Competition (Controls), Lumindt (Thermal + Structural)
+
+FireWarden, VAWT Project, NIWE Blade Internship
+
+Industrial Automation / Mfg
+
+GrayMatter (all projects), USC Makerspace, TuTr Hyperloop
+
+Formula SAE, USC DRCL
+
+Hardware Testing / Validation
+
+Lumindt THW system, GrayMatter DAQ, Wind Controls bench test
+
+Honeycomb Wind Tunnel, Makerspace (dial indicator)
+
+Mechatronics / Controls
+
+Wind Competition Controls, USC DRCL, GrayMatter DAQ
+
+VAWT, Lumindt, Smart Alarm Clock
+
+Aerospace / GNC
+
+NIWE Blade Design, Formula SAE (CFD automation), TuTr Hyperloop
+
+GrayMatter (helicopter blades), QBlade/StarCCM+
+
+Startup / Entrepreneurship
+
+FireWarden ($20K, Techstars), AEE (industry partnerships)
+
+Wind Competition (founded from scratch)
+
+LinkedIn Message Quick Guide
+
+Cold outreach: Template 1. Swap in 1 project result that matches the company's domain.
+
+After applying: Template 2. Quote one JD requirement and map it to one STAR result.
+
+Networking: Template 3. Ask about their work first. Mention shared domain, not your resume.
+
+WORK EXPERIENCE
+
+GrayMatter Robotics  —  Robotics Systems & Applications Intern
+
+Jan 2026 – May 2026  |  Robotic surface finishing & automation  |  Torrance, CA
+
+Project 1: Production-Ready Universal Sanding Fixture  ★ Hero Project
+
+SolidWorks  ·  MeshLab  ·  Point Cloud Processing  ·  Spring-Loaded Mechanisms  ·  Computer Vision Integration  ·  Force Testing  ·  3D Printing  ·  Rapid Prototyping  ·  ROS2  ·  Cross-functional
+
+S
+
+SITUATION  The initial fixture designs for a high-value customer part caused the robot to sand the fixture itself — the vision segmentation algorithm could not distinguish fixture geometry from the workpiece. The product line had 14 SKUs ranging S to XL.
+
+T
+
+TASK  Redesign the fixture from scratch to hold all 14 configurations reliably, eliminate vision misclassification, and meet customer requirements for operator comfort, throughput, and reliability.
+
+ACTION
+
+Mapped all mechanical, vision, and software constraints across mechanical, applications, software, and customer-facing teams before touching a design.
+
+Developed multiple SolidWorks concepts and analyzed point clouds in MeshLab to understand how the vision segmentation system interpreted geometry — tuned segmentation parameters iteratively with the vision team.
+
+Introduced compliant spring-loaded features to accommodate S–XL part size variation without manual adjustment between variants.
+
+Incorporated displacement sensors to validate part seating before the sanding cycle begins.
+
+Performed force testing to identify failure modes and quantify performance improvements across design iterations.
+
+Executed rapid prototyping cycles using 3D printing and modular design for fast mechanical iteration.
+
+Coordinated deliverables across software, applications, and customer teams throughout — managing competing constraints from each stakeholder.
+
+RESULT
+
+Universal fixture successfully accommodated all 14 SKUs (S through XL) in a single design.
+
+Eliminated vision misclassification — robot no longer sanded the fixture itself.
+
+Customer confirmed strong satisfaction with robustness and performance outcomes.
+
+Cross-disciplinary scope: mechanical design + vision integration + experimental testing + stakeholder management.
+
+Project 2: Systems & Applications Engineering — Robotic Arm Process Development
+
+ROS2  ·  RVIZ  ·  MeshLab  ·  Point Cloud Segmentation  ·  Toolpath Planning  ·  FANUC Arms  ·  Python  ·  YAML/JSON  ·  DOE  ·  Sensor Calibration  ·  GitHub
+
+S
+
+SITUATION  GrayMatter deploys robotic sanding arms on customer parts (helicopter blades, helmets, vehicle body panels) — each requiring custom segmentation, toolpath planning, and sanding recipe validation before deployment.
+
+T
+
+TASK  Lead system and applications engineering for customer parts: from 3D scan through segmentation, toolpath generation, FANUC robot programming, and process recipe development.
+
+ACTION
+
+Conducted reachability studies from CAD models to determine what surface coverage a robot could achieve before physical setup — identifying blind spots early.
+
+Worked with multiple segmentation algorithms on point clouds (Euclidean clustering, curvature-based segmentation, projection segmentation, swept cylinder, surface normals) to correctly isolate target surfaces from surrounding geometry in MeshLab.
+
+Developed toolpaths by tuning CNT (continuous motion) values, tool orientation, overlap percentage, and pass direction — balancing coverage, cycle time, and surface finish requirements.
+
+Programmed FANUC robotic arms to execute validated toolpaths, handling coordinate frame setup, motion parameter tuning, and arm-specific quirks.
+
+Developed sanding process recipes: swept force, RPM, and continuous path (CNT) parameters for each part material and finish requirement.
+
+Performed multi-axis sensor calibration (force, IMU, cameras) and validated sensor output against known reference conditions.
+
+Designed and executed DOE-driven sanding campaigns — sweeping force, tilt angle, and RPM — documenting results in structured test plans to identify parameters meeting surface roughness within ±10% spec.
+
+Managed project files with GitHub; used YAML/JSON config files for process parameter storage and ROS2 pipeline configuration.
+
+Applied workflow to diverse parts: helicopter blades (complex curvature, tight tolerance), helmets (free-form surface), large vehicle body panels (scale and reachability challenges).
+
+RESULT
+
+Developed end-to-end proficiency in robotic process engineering: from raw point cloud to deployed, validated robot program.
+
+Built practical expertise in ROS2 + RVIZ, MeshLab automation, FANUC programming, and process-DOE methodology.
+
+Reduced manual effort in segmentation and toolpath setup through Python automation scripts.
+
+Project 3: Multimodal Human Sanding Characterization DAQ Pipeline
+
+Force Sensors  ·  IMUs  ·  OpenVR Position Tracking  ·  Thermal Sensors  ·  Multimodal DAQ  ·  Python  ·  ROS2  ·  Rerun Visualisation  ·  Hardware-in-the-Loop  ·  Post-Processing Analytics  ·  Industrial Time Studies
+
+S
+
+SITUATION  GrayMatter needed to understand expert human sanding behaviour at a physical parameter level — force profiles, motion patterns, thermal signatures — to automate industrial engineering time studies and build a solutions-engineering intelligence layer for robot process development.
+
+T
+
+TASK  Build a multimodal DAQ pipeline synchronising force, IMU, position (OpenVR), and thermal sensor streams at 100+ Hz in hardware-in-the-loop conditions, with a full post-processing analytics layer to characterise human sanding processes and drive robot feasibility decisions.
+
+ACTION
+
+Selected and integrated force sensors, IMUs, OpenVR position trackers, and thermal sensors into a time-synchronised ROS2 pipeline running at 100+ Hz.
+
+Wrote Python modules following production code best practices for sensor data acquisition, relay control, and automation workflows.
+
+Integrated Rerun for real-time and post-hoc visualisation of 3D sanding paths (from OpenVR position tracking) with the ability to select any path segment and graph the corresponding physical parameters (force, velocity, temperature) for that interval — enabling rapid human expert analysis.
+
+Built a post-processing analytics pipeline that transforms raw sensor data into actionable engineering outputs: (1) ESH (ergonomic/safety/health) savings calculator — takes engineer inputs and produces dollar-value savings estimates from reduced human sanding exposure; (2) data-driven task classification — identifies robot-doable, high-risk, non-value-add, and not-yet-automatable operations from recorded physical parameter signatures; (3) robot feasibility recommendations — suggests process modifications to make borderline tasks robot-doable; (4) consumables calculator — estimates sanding consumable usage (pads, abrasives) from process parameters.
+
+Designed the pipeline to feed GrayMatter's solutions-engineering agent core and model optimisation workflows.
+
+Validated pipeline data quality against known reference conditions and human benchmarks.
+
+RESULT
+
+Reduced industrial engineering time studies by approximately 40%.
+
+Analytics layer enables quantified dollar-value business cases for robot deployment (ESH savings tool) — directly supporting sales and customer engineering conversations.
+
+Task classification output gives engineering teams a data-backed map of what a robot can and cannot do for a given customer part — reducing manual assessment time.
+
+Produced a reusable, modular platform (DAQ + visualisation + analytics) feeding GrayMatter's process intelligence roadmap.
+
+Lumindt Labs  —  Mechanical Engineering Intern
+
+Jun 2025 – Aug 2025  |  Thermal energy storage & hydrogen systems startup
+
+Project 1: Transient Hot-Wire Thermal Conductivity Measurement System
+
+Transient Hot-Wire  ·  Platinum Wire Sensor (25μm)  ·  Signal Conditioning  ·  Raspberry Pi DAQ  ·  Python  ·  SolidWorks  ·  Uncertainty Analysis  ·  Thermal Conductivity  ·  Metal Powders
+
+S
+
+SITUATION  Lumindt needed thermal conductivity data for metal powders being evaluated for thermal energy storage. No commercial instrument was suited to the specific material form factor; a custom solution was required.
+
+T
+
+TASK  Design and build a complete thermal conductivity measurement system from scratch capable of repeatable, accurate characterisation of four metal powder samples to support material down-selection.
+
+ACTION
+
+Conducted a literature review on thermal conductivity measurement methods and selected the transient hot-wire (THW) technique as optimal for loose powder characterisation.
+
+Designed and fabricated a custom test fixture in SolidWorks housing a 25-micron platinum wire sensor.
+
+Designed and built signal conditioning circuitry for the platinum wire's resistance-temperature response.
+
+Built a Raspberry Pi data acquisition system and wrote Python automation scripts for data capture, thermal cycling, and repeatability analysis.
+
+Developed a thermal sensing pipeline using real-time conductivity readings to identify hydrogen activation state and process stage in metal powder electrolysers — enabling sensor-based state estimation for process control without direct chemical measurement.
+
+Conducted formal uncertainty analysis; investigated effects of porosity and contact resistance on measurement accuracy.
+
+Established documented, repeatable testing procedures across multiple temperature setpoints.
+
+RESULT
+
+Achieved repeatable thermal conductivity measurements with less than 10% uncertainty across four metal powder samples.
+
+Enabled material down-selection decisions for Lumindt's thermal energy storage development programme.
+
+Created a complete characterisation capability from zero — integrating heat transfer theory, precision instrumentation, electronics, and software.
+
+Project 2: Structural Design — Electrolyser Skid & Fuel Cell Frame
+
+SolidWorks Weldments  ·  Structural Calculations  ·  ASME Stress Analysis  ·  Manifold Design  ·  Steel Frame Design  ·  8020 Extrusions  ·  Hydrogen Line Routing  ·  Serviceability
+
+S
+
+SITUATION  Lumindt needed production-ready structural hardware: a skid to house 24 electrolysers (300 kg each) and a modular frame for a 250 kW fuel cell system (200 kg capacity).
+
+T
+
+TASK  Design both structures to meet load requirements, integrate fluid manifolds (hydrogen, coolant, water), minimise footprint, and ensure serviceability — validated against ASME standards.
+
+ACTION
+
+Designed the 24-electrolyser skid in SolidWorks Weldments integrating optimised manifold routing for hydrogen, coolant, and water lines — balancing structural strength, minimal footprint, and maintainability.
+
+Designed the 250 kW fuel cell frame using a welded steel base combined with carbon steel tubing and 8020 aluminium extrusions for modularity.
+
+Performed ASME-standard preliminary stress analyses to validate structural safety margins under operating loads.
+
+Selected balance-of-plant components (pumps, valves, adapters); fabricated custom adapters where off-the-shelf solutions did not meet fit/form requirements.
+
+Built an Excel-based heat exchanger and coolant loop calculator to evaluate coolant composition effects on specific heat, efficiency, and operating thresholds.
+
+RESULT
+
+Delivered production-ready designs for both structures with validated structural safety margins.
+
+Manifold design met hydrogen, coolant, and water routing requirements within the constrained skid footprint.
+
+Demonstrated ability to work across mechanical design, structural analysis, fluid systems, and component selection within a single engineering workstream.
+
+USC Baum Family Makerspace  —  Machinist & Fabrication Engineer
+
+Sep 2023 – Present  |  Precision machining, prototyping, and manufacturing support
+
+Haas CNC Mill  ·  CNC Lathe  ·  ProtoTRAK  ·  Omax Waterjet  ·  Laser Cutter  ·  MasterCam  ·  GD&T  ·  DFM  ·  3D Printing (FDM/SLA/Carbon Fibre)  ·  Chemical Support Removal  ·  Dial Indicator
+
+S
+
+SITUATION  The Makerspace supports 80+ research labs and 12+ design teams at USC who need precision components fabricated beyond student skill level, and who need DFM guidance to make their designs manufacturable.
+
+T
+
+TASK  Manufacture GD&T-critical components across a range of processes, support prototype development, and help engineering teams design for manufacturability.
+
+ACTION
+
+Programmed and operated Haas CNC Mill and Lathe, ProtoTRAK, Omax waterjet, and laser cutter to manufacture GD&T-critical components — interpreting complex technical drawings and optimising MasterCam toolpaths for each job.
+
+Applied first-principles machining: selected cutting speeds, feeds, tool geometry, and fixturing strategy for each material (aluminium, steel, delrin, etc.) using standard machining equations and material datasheets.
+
+Used dial indicators to verify dimensional accuracy and surface finish against GD&T callouts — qualifying parts before release to teams.
+
+Fabricated 100+ 3D-printed prototypes across FDM (PLA), SLA (resin), and carbon fibre-reinforced FDM — including aerodynamic elements for the Formula SAE car.
+
+Used chemical support dissolution (Stratasys soluble support bath) to remove internal supports from complex geometries without damaging fine features.
+
+Provided DFM consultations: reviewed student designs for machinability, identified features that would be difficult or expensive to machine, and recommended design modifications to reduce iteration cycles.
+
+RESULT
+
+Machined GD&T-critical components to ±0.001 inch tolerances verified by dial indicator measurement.
+
+Supported 80+ research labs and 12+ design teams — one of the highest-utilisation machinists in the space.
+
+Fabricated 100+ prototypes across three 3D printing technologies; chemical support removal enabled complex internal geometries that FDM support removal would have damaged.
+
+DFM guidance demonstrably reduced iteration cycles for multiple teams by catching manufacturability issues at the design stage.
+
+USC Dynamic Robotics & Controls Lab  —  Mechanical Engineer
+
+Sep 2025 – Present  |  Robotic hand design and compliant actuation
+
+SolidWorks  ·  MuJoCo Simulation  ·  Series Elastic Actuator  ·  N20 Motor  ·  C++ Motor Driver  ·  Parallel Link Mechanism  ·  Force Feedback  ·  Torque Analysis  ·  Rapid Prototyping
+
+S
+
+SITUATION  The lab is developing an 8-DOF robotic hand (two fingers, thumb, 2-DOF wrist) capable of catching and throwing a basketball at 20 N force — requiring compliant actuation for safe, controllable contact.
+
+T
+
+TASK  Design and prototype the Series Elastic Actuator (SEA) module and rigid finger joints with parallel link mechanism, and validate force feedback fidelity through bench testing.
+
+ACTION
+
+Designed 8-DOF finger joint assemblies with parallel link mechanisms in SolidWorks for the rigid-actuation fingers.
+
+Designed and rapid-prototyped an SEA test fixture for an N20 motor — including spring selection, mounting, adhesive strategy, and locking mechanism.
+
+Performed torque calculations for N20 motor selection and validated output torque and compliance against design targets using bench-level force sensor measurements.
+
+Wrote C++ motor driver code for low-level motor control.
+
+Simulated hand kinematics and dynamics in MuJoCo to validate design decisions before hardware build.
+
+RESULT
+
+Produced a functional SEA prototype with validated force feedback fidelity benchmarked against design targets.
+
+Parallel-link finger joints designed and iterated in SolidWorks; prototypes fabricated and tested.
+
+Built practical expertise in compliant actuation design, motor sizing, C++ embedded control, and simulation-to-hardware workflows.
+
+USC Robotic Locomotion & Dynamic Lab  —  Mechanical Design Engineer
+
+Sep 2023 – May 2024  |  Quadrupedal robot leg mechanism design
+
+Siemens NX  ·  ANSYS Mechanical FEA  ·  4-Link Leg Mechanism  ·  Force-Sensing  ·  Direct Drive  ·  Custom Holding Frame  ·  Terrain Navigation
+
+S
+
+SITUATION  The lab was developing a direct-drive quadrupedal robot for complex terrain navigation and needed a leg mechanism that could sense contact forces while handling dynamic loading.
+
+T
+
+TASK  Design a 4-link leg mechanism with custom holding frame for a force-sensing direct-drive quadruped, validated structurally for terrain navigation loads.
+
+ACTION
+
+Devised a 4-link leg mechanism geometry in Siemens NX, balancing range of motion, force transmission, and packaging constraints.
+
+Designed a custom holding frame to mount the mechanism on the quadruped chassis.
+
+Ran ANSYS Mechanical FEA to validate structural integrity under expected terrain impact loads.
+
+RESULT
+
+Delivered a validated mechanism design meeting the lab's range-of-motion and structural requirements.
+
+Developed practical experience in linkage mechanism design and FEA-driven structural validation.
+
+TuTr Hyperloop  —  Mechanical Engineer Intern
+
+Jun 2024 – Jul 2024  |  Hyperloop chassis structural optimisation
+
+ANSYS Mechanical  ·  Siemens NX  ·  1D Structural Analysis  ·  3D FEA  ·  Chassis Optimisation  ·  Weight Reduction
+
+S
+
+SITUATION  TuTr's hyperloop pod chassis needed to be lighter without compromising structural integrity for high-speed travel loads.
+
+T
+
+TASK  Analyse the existing chassis design and identify weight reduction opportunities while maintaining structural safety margins.
+
+ACTION
+
+Conducted 1D and 3D structural analyses in ANSYS Mechanical and Siemens NX to identify over-designed sections.
+
+Proposed targeted material removal and geometry changes; validated each iteration against stress and deflection limits.
+
+RESULT
+
+Optimised chassis weight by 30% while maintaining full structural integrity under operating load cases.
+
+National Institute of Wind Energy (NIWE)  —  Wind Blade Intern
+
+Jul 2023 – Aug 2023  |  Wind turbine blade design & analysis  |  Chennai, India
+
+SolidWorks  ·  ANSYS Mechanical  ·  Blade Load Cases  ·  Certification Standards  ·  Structural Optimisation
+
+S
+
+SITUATION  NIWE's certification department needed a research-grade analysis of a 5.7 m wind turbine blade across multiple load cases to support their certification workflow.
+
+T
+
+TASK  Design, analyse, and optimise the blade geometry in SolidWorks and ANSYS Mechanical, evaluating structural performance across defined load cases.
+
+ACTION
+
+Designed a 5.7 m wind turbine blade geometry in SolidWorks.
+
+Ran ANSYS Mechanical structural simulations across multiple load cases (gravity, wind, fatigue representative cases).
+
+Optimised blade geometry based on simulation results.
+
+RESULT
+
+Delivered a complete blade analysis report to the certification department.
+
+Gained practical exposure to industrial wind blade design standards and certification workflows.
+
+FireWarden  —  Co-Founder & CTO
+
+Jan 2025 – Sep 2025  |  Wildfire mitigation startup  |  $20K InnovateLA · Techstars Pre-Accelerator
+
+First-Principles Fluid Dynamics  ·  Sprinkler System Engineering  ·  Web Application  ·  Satellite/Elevation Data  ·  Customer Discovery  ·  Pitch Competitions  ·  Techstars
+
+S
+
+SITUATION  Wildfires are a growing risk for homeowners; most mitigation solutions are expensive, complex, and difficult to evaluate. No accessible tool existed for homeowners to size and plan a sprinkler-based defence system.
+
+T
+
+TASK  Co-found the startup and lead technical development of a software engineering calculator that made wildfire sprinkler system design accessible — starting with pool-sourced systems.
+
+ACTION
+
+Led development of a web application processing user addresses to generate optimised sprinkler layouts: analysing elevation data, pool resources, property geometry, and roof characteristics.
+
+Applied first-principles fluid dynamics to compute sprinkler flow rates, pressure requirements, and coverage geometry.
+
+Supported pilot deployment analysis on a Laguna Beach home.
+
+Led customer discovery, product development, and pitch competition preparation.
+
+RESULT
+
+Won the DAS InnovateLA Competition — $20,000 in prize funding.
+
+Entered the Techstars Pre-Accelerator programme.
+
+Validated product-market fit through customer discovery and pilot site analysis.
+
+Although FireWarden ceased operations, built strong foundations in startup strategy, technical product development, and technology commercialisation.
+
+LEADERSHIP & INVOLVEMENT
+
+USC Collegiate Wind Competition (AEE)  —  Founder & Team Lead
+
+Dec 2024 – May 2026  |  DOE Collegiate Wind Competition  |  Also: AEE Director of Outreach
+
+Electronics, Controls & Firmware
+
+Arduino Firmware  ·  RPM/Voltage/Current Sensors  ·  I2C Architecture  ·  MOSFETs  ·  Buck-Boost Converter  ·  Electrical Braking  ·  Power Resistors  ·  Oscilloscope  ·  Soldering  ·  State Machine
+
+S
+
+SITUATION  USC had no CWC team. The turbine's complete electrical and controls system needed to be designed from scratch by a mechanical engineer with limited prior electronics experience.
+
+T
+
+TASK  Design and implement end-to-end electronics and controls: schematics, sensor integration, firmware, braking system, and bench validation.
+
+ACTION
+
+Designed full electrical schematics integrating RPM, voltage, and current sensors via I2C protocol on an Arduino Uno, including firmware in Arduino IDE.
+
+Engineered an electrical braking system using MOSFETs and power resistors as a variable resistive load for rated-power control and safe shutdown.
+
+Implemented a state machine and estimation logic for turbine operating modes: startup, cut-in pitch for max power extraction, and feathering for braking.
+
+Designed collective pitch actuation system for startup and maximum power tracking.
+
+Planned and partially implemented a buck-boost converter for electrical conditioning.
+
+Performed hands-on soldering, hardware bring-up, and I2C sensor debugging — validated control loop behaviour against expected electrical characteristics using oscilloscope and multimeter.
+
+RESULT
+
+Delivered a complete, working turbine controls architecture — built by a mechanical engineer from first principles.
+
+State machine correctly sequences through all turbine operating modes with validated sensor feedback.
+
+Turbine Mechanical Design & Project Development
+
+Siemens NX  ·  QBlade  ·  StarCCM+  ·  Blade Aerodynamics  ·  FLORIS Wake Optimiser  ·  Wind Farm Layout  ·  Grid Interconnection  ·  Site Assessment  ·  Project Management
+
+S
+
+SITUATION  Beyond controls, the team needed a full turbine mechanical design and a utility-scale wind farm project development analysis to meet DOE competition deliverables.
+
+T
+
+TASK  Lead turbine mechanical design and the project development sub-team covering site assessment, grid interconnection, and financial/policy planning.
+
+ACTION
+
+Led turbine mechanical design — structure, braking system, and drivetrain — in Siemens NX.
+
+Ran blade aerodynamic simulations in QBlade and StarCCM+ to optimise geometry for target power output.
+
+Developed a FLORIS-based wake and yaw optimiser to determine optimal turbine layout (number of turbines, spacing, yaw offsets) for utility-scale farm design.
+
+Led project development sub-team: site assessment, grid interconnection analysis, financial modelling, and policy review to meet DOE deliverable requirements.
+
+Initiated partnerships with 8+ energy companies (including Bloom Energy, Schneider Electric); organised 5+ site tours and industry panels.
+
+Established the USC Chapter of AEE — drafted constitution, defined leadership structure, secured university recognition.
+
+RESULT
+
+Founded USC's first CWC team from nothing — recruited team, established structure, delivered competition entries.
+
+Built FLORIS-based wind farm layout optimiser; developed end-to-end utility-scale project development analysis.
+
+AEE chapter now operating with established industry partnerships and faculty engagement.
+
+Formula SAE (SC Racing)  —  Aerodynamics & Vehicle Dynamics Engineer
+
+Jan 2023 – Present  |  CFD automation · Composite fabrication · Validation tools
+
+ANSYS Fluent  ·  MATLAB Automation  ·  CFD Meshing  ·  Composite Layup  ·  Resin Infusion  ·  CNC Mould Milling  ·  Yaw Probe  ·  Toe Alignment Tool  ·  Siemens NX  ·  GD&T
+
+S
+
+SITUATION  The team needed faster aerodynamic simulation iteration and tighter correlation between CFD predictions and physical test results.
+
+T
+
+TASK  Improve aero development efficiency through simulation automation and build physical validation tools to close the simulation-to-hardware loop.
+
+ACTION
+
+Automated aerodynamic mesh generation in ANSYS Fluent using a fault-tolerant mesh system and MATLAB scripting — cutting CFD setup time by approximately 60% and enabling rapid DOE iteration.
+
+Designed and analysed a tire cover in Siemens NX and ANSYS Fluent to minimise tire turbulence impact on drag.
+
+CNC-milled high-precision moulds and performed composite layup (resin infusion) to manufacture aerodynamic elements — including components twice the size yet 50% lighter using optimised fibre orientation.
+
+Developed setup and validation tools: toe alignment tool and yaw probe — used to correlate real-world vehicle dynamics and aero measurements against simulation results.
+
+RESULT
+
+CFD setup time reduced by ~60% through MATLAB-driven mesh automation.
+
+Composite elements achieved target geometry accuracy for CFD correlation.
+
+Simulation-to-hardware validation loop closed through yaw probe and alignment tool data.
+
+INDEPENDENT PROJECTS
+
+Adaptive Pitch Control — 5" H-Type Vertical Axis Wind Turbine
+
+Bayesian Optimisation  ·  PID Control  ·  Blade Pitch Mechanism  ·  Wind Tunnel Testing  ·  Cp vs Wind Speed Analysis  ·  Fabrication
+
+S
+
+SITUATION  VAWTs commonly operate below their theoretical aerodynamic efficiency due to fixed blade pitch — particularly at off-design wind speeds.
+
+T
+
+TASK  Design, fabricate, and test a 5-inch H-type VAWT with individual blade pitch control, using Bayesian Optimisation and PID to improve efficiency across operating conditions.
+
+ACTION
+
+Designed and fabricated a 5-inch H-type VAWT with individual blade pitch actuation mechanism.
+
+Implemented Bayesian Optimisation to search the pitch control parameter space.
+
+Developed PID controller for active pitch tracking.
+
+Tested in the wind tunnel — measured Cp vs wind speed curves to validate adaptive pitch performance against fixed-pitch baseline.
+
+RESULT
+
+Targeting approximately 8% efficiency improvement through adaptive pitch vs. fixed pitch baseline.
+
+Built practical expertise in control algorithm implementation (Bayesian Opt + PID), small turbine fabrication, and wind tunnel measurement.
+
+Honeycomb Flow Straightener Wind Tunnel Study
+
+Wind Tunnel Design  ·  Honeycomb Flow Straightener  ·  Pitot Tube Measurement  ·  Turbulence Intensity  ·  Fabrication (Plywood/Acrylic/PLA)
+
+S
+
+SITUATION  Wind tunnel turbulence reduces measurement repeatability and test quality.
+
+T
+
+TASK  Design, build, and experimentally validate a 20-inch blow-down wind tunnel with a honeycomb flow straightener to quantify turbulence reduction.
+
+ACTION
+
+Designed and fabricated the 20-inch test-section blow-down wind tunnel (plywood frame, laser-cut acrylic panels, 3D-printed PLA honeycomb).
+
+Conducted experiments using a pitot tube at multiple cross-sections to map turbulence intensity.
+
+RESULT
+
+Turbulence intensity reduced by 53% at the front measurement location.
+
+Turbulence intensity reduced by 86% at the rear measurement location.
+
+Smart Alarm Clock with REM Sleep Monitoring  🏆 1st Place IEEE Hack-IoT
+
+Arduino DAQ  ·  Pulse Meter  ·  BPM Tracking  ·  Sleep Cycle Analysis  ·  Embedded Systems
+
+S
+
+SITUATION  Standard alarms wake users regardless of sleep stage, leading to grogginess.
+
+T
+
+TASK  Build a smart alarm clock that tracks BPM via pulse meter and Arduino DAQ, uses sleep cycle data to wake the user during optimal REM phase.
+
+ACTION
+
+Integrated a pulse meter with an Arduino-based DAQ to continuously monitor BPM.
+
+Developed sleep cycle detection logic to identify optimal wake window.
+
+Built the complete hardware and embedded system in a hackathon setting.
+
+RESULT
+
+Won 1st place at the IEEE Hack-IoT competition.
+
+Walkane — Collapsible Walker-Cane Hybrid  🏆 2nd Place ASBME Makeathon
+
+Mechanism Design  ·  Collapsible Structure  ·  Medical Device  ·  DFM  ·  Rapid Prototyping
+
+S
+
+SITUATION  Existing walkers and canes handle flat ground or stairs poorly — transitions between the two are unstable and risky for elderly users.
+
+T
+
+TASK  Engineer a hybrid walker-cane with a collapsible design that improves stability during stair-to-flat-ground transitions.
+
+ACTION
+
+Designed collapsible mechanism to transition between walker and cane configurations.
+
+Prototyped and iterated on stability and ease of use.
+
+RESULT
+
+Won 2nd place at the ASBME Makeathon.
+
+Other Projects (Summary)
+
+Truss Bridge Optimisation: Parametric MATLAB simulation to optimise geometry for structural efficiency; validated with load cell testing.
+
+2-DOF Bluetooth-Controlled Car: Arduino + motor drivers for real-time Bluetooth remote navigation.
+
+Water Rocket Flight Optimisation: MATLAB model optimising air-to-water ratio, pressure, and parachute area for max flight efficiency.
+
+Drone CAD & FEA: Siemens NX design + FEA and MBD structural analysis for aerodynamics and durability.
+
+NIWE Wind Blade: 5.7 m blade design, load-case analysis, and optimisation in SolidWorks + ANSYS for NIWE certification dept.
+
+Strandbeest Model: 3D-printed scaled functional model demonstrating mechanical linkages and wind-powered locomotion.
+
+Automated Monopoly Board: Electro-mechanical robotic Monopoly system enabling human vs. bot gameplay — team of 6.
+
+CORE SKILLS MATRIX
+
+Controls & Firmware
+
+Arduino IDE · I2C architecture · State machine design · PID control · Bayesian optimisation · MOSFET braking · Buck-boost converter · Embedded C++
+
+Robotics
+
+ROS2 · RVIZ · FANUC arm programming · Toolpath planning (CNT, orientation, overlap) · Point cloud segmentation · MuJoCo simulation · Reachability studies
+
+Sensing & DAQ
+
+Force sensors · IMUs · OpenVR position tracking · Thermal sensors · Current/voltage/RPM · Transient hot-wire · Multimodal sync at 100+ Hz · Signal conditioning · Rerun visualisation · LabVIEW
+
+Mechanical Design
+
+SolidWorks · Siemens NX · Fusion 360 · GD&T · DFM · Compliant mechanisms · SEA design · Parallel link mechanisms · Weldment design
+
+Simulation & Analysis
+
+ANSYS Mechanical FEA · ANSYS Fluent CFD · MuJoCo · QBlade · StarCCM+ · MATLAB/Simulink · FLORIS wake optimiser
+
+Manufacturing
+
+Haas CNC Mill & Lathe · ProtoTRAK · Omax Waterjet · Laser Cutter · MasterCam · FDM/SLA/Carbon Fibre 3D Printing · Composite Layup · Resin Infusion · ±0.001" tolerancing
+
+Thermofluids
+
+Transient hot-wire method · Heat exchanger design · Coolant loop analysis · Fluid dynamics · CFD (Fluent) · Thermal management · Hydrogen system thermal characterisation
+
+Structural
+
+ASME stress analysis · Weldment structural calc · Chassis optimisation · Blade load case analysis · 1D & 3D FEA
+
+Software & Scripting
+
+Python (DAQ, automation, MeshLab scripting) · MATLAB · C++ · Arduino · ROS2 · YAML/JSON · GitHub · LabVIEW
+
+Energy Systems
+
+Wind turbine controls & design · FLORIS farm optimisation · QBlade/StarCCM+ blade aero · Thermal energy storage · Electrolyser & fuel cell systems · Hydrogen gas handling
+
+Leadership & Entrepreneurship
+
+Team founding & management · Cross-functional stakeholder coordination · Customer discovery · Pitch competitions · Partnership development · Chapter founding (AEE USC)
+
+LINKEDIN MESSAGE TEMPLATES
+
+Customise the [bracketed] fields for each message. Keep connection request notes under 300 characters; use the full version for InMail or follow-up messages after connecting.
+
+Template 1 — Cold Outreach to Recruiter / Hiring Manager
+
+Hi [Name],
+
+I'm a Mechanical Engineering student at USC actively looking for [role type — e.g. controls / robotics / hardware testing] roles. I noticed [Company] works on [specific domain] and I'd love to learn more about opportunities on your team.
+
+My recent work includes [one result — e.g. redesigning a universal sanding fixture for 14 SKUs at GrayMatter Robotics / building a thermal conductivity system from scratch at Lumindt / developing full turbine controls for USC's CWC team]. I'm drawn to [Company] because [one specific reason — product, mission, technology].
+
+Happy to share more — thanks for your time.
+
+Template 2 — Follow-Up After Applying
+
+Hi [Name],
+
+I recently applied for the [Job Title] role at [Company] and wanted to reach out directly. I'm a Mechanical Engineering student at USC (GPA 3.6, graduating May 2026) with strong experience in [controls / robotics / thermofluids — match the JD].
+
+One thing that stood out in the role description was [specific JD requirement]. In my work at [GrayMatter / Lumindt / Wind Competition / DRCL], I [one-sentence STAR result that maps directly to that requirement].
+
+I'd appreciate any visibility you could give my application — thanks so much.
+
+Template 3 — Networking with Engineers at Target Companies
+
+Hi [Name],
+
+I came across your profile and was genuinely interested in [something specific — their project, paper, talk, or team]. I'm an ME student at USC working in [controls / robotics / thermal systems] and looking to understand what [that specific work] looks like day-to-day at [Company].
+
+I've been working on [one-line project mention — e.g. developing end-to-end controls for a wind turbine / building a robotic process engineering pipeline at GrayMatter] and I think there's real overlap with what your team is doing. Would you be open to a quick 20-minute call?
+
+No worries if not — appreciate the work you're sharing either way.
+
+Short Blurb Variants (for application portals / email intros)
+
+Controls / Robotics focus: ME student at USC with hands-on experience in ROS2 robotics, Arduino-based controls firmware, multimodal sensing (force, IMU, thermal), and hardware-in-the-loop validation. Built full turbine controls architecture from scratch; developed robotic sanding process pipelines at GrayMatter Robotics. Graduating May 2026.
+
+Clean Energy / Thermal focus: ME student at USC with experience in thermal systems engineering, precision instrumentation (transient hot-wire method, <10% uncertainty), and wind turbine design (QBlade, StarCCM+, FLORIS). Interned at Lumindt Labs (hydrogen/thermal storage) and led USC's DOE Collegiate Wind Competition team from founding. Graduating May 2026.
+
+General hardware / broad: ME student at USC (GPA 3.6) with internships at GrayMatter Robotics, Lumindt Labs, and TuTr Hyperloop. Work spans robotics systems engineering, thermal instrumentation, structural design, controls firmware, and precision manufacturing. Co-founded FireWarden ($20K InnovateLA). Graduating May 2026.
+
+ADD NEW ENTRY — STAR TEMPLATE
+
+HOW TO USE THIS PAGE
+
+Copy this section for each new project or role you add. Fill in the orange placeholder fields. The format is identical to every entry above so it slots in cleanly.
+
+Role / Project Title
+
+[e.g. Controls Engineer Intern — Acme Robotics]
+
+Company / Team
+
+[Company name, team, or lab]
+
+Date Range
+
+[Month YYYY – Month YYYY]
+
+Domain Tags
+
+[e.g. Controls · ROS2 · Hardware Testing]
+
+Hero Project?
+
+[Yes / No — if yes, note which role type it leads for]
+
+[Project or Role Name]
+
+Skills used: [Tool1 · Tool2 · Technique1 · Technique2]
+
+S
+
+SITUATION  [Describe the context — what problem existed, what was the company trying to do?]
+
+T
+
+TASK  [What were YOU specifically asked or responsible for?]
+
+ACTION
+
+[What did you specifically do? Be concrete — tools, decisions, techniques]
+
+[What was technically hard about it?]
+
+[Who did you coordinate with / what constraints did you work within?]
+
+RESULT
+
+[Quantified outcome if possible — %, time saved, tolerance achieved, customer outcome]
+
+[What skill or capability did you build / demonstrate?]
+
+TIPS FOR STRONG STAR ENTRIES
+
+SITUATION: One or two sentences max. What was broken, missing, or needed? What was the business/technical context?
+
+TASK: Be specific about YOUR role. Not 'the team needed X' — 'I was responsible for X.'
+
+ACTION: Concrete verbs + specific tools. 'Designed X in SolidWorks' not 'worked on design.' Include what was technically hard.
+
+RESULT: Lead with numbers where possible (%, ms, tolerance, prize $, people supported). If no numbers, describe the downstream impact.
+
+Quick result prompts: How much faster / lighter / more accurate? What decision did your work enable? Who used it? What broke before that didn't break after?
+
+Skills row tip: List the 6–10 most searchable/specific tools and techniques. These map directly to recruiter keyword searches and ATS systems.
+
+Reeth S. Kawad  ·  Master Career Reference  ·  USC Mechanical Engineering  ·  Graduating May 2026  ·  Actively seeking full-time roles

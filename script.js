@@ -3,6 +3,17 @@
 //  script.js
 // ═══════════════════════════════════════════════════════════════
 
+// If a unified `PROJECTS` array is provided (site-data.js), expose it as `projects` for legacy code.
+if (typeof PROJECTS !== 'undefined') {
+  window.projects = PROJECTS;
+}
+if (typeof EXPERIENCE !== 'undefined') {
+  window.experience = EXPERIENCE;
+}
+if (typeof SKILLS !== 'undefined') {
+  window.skills = SKILLS;
+}
+
 // ── State ───────────────────────────────────────────────────
 const state = {
   activeFilter: 'all',
@@ -60,7 +71,10 @@ function renderProjects() {
   if (!grid) return;
   grid.innerHTML = '';
 
-  projects.forEach(p => {
+  // Use PROJECTS from data/site-data.js when available, fallback to legacy `projects`
+  const source = (typeof PROJECTS !== 'undefined') ? PROJECTS : (typeof projects !== 'undefined' ? projects : []);
+
+  source.forEach(p => {
 
     const card = document.createElement('article');
     card.className = `project-card ${zoneClass(p.zone)}`;
@@ -70,8 +84,11 @@ function renderProjects() {
     card.setAttribute('tabindex', '0');
     card.setAttribute('aria-label', p.title);
 
+    // Determine image property name depending on source
+    const imgSrc = p.thumb || p.image || '';
+
     card.innerHTML = `
-      <img class="card-image" src="${p.image}" alt="${p.title}" loading="lazy" />
+      <img class="card-image" src="${imgSrc}" alt="${p.title}" loading="lazy" />
       <div class="card-body">
         <div class="card-meta">
           <span class="zone-badge ${zoneClass(p.zone)}">${zoneLabel(p.zone)}</span>
@@ -85,10 +102,14 @@ function renderProjects() {
       </div>
     `;
 
-    card.addEventListener('click',   () => openDrawer(p.id));
-    card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDrawer(p.id); } });
-
-    grid.appendChild(card);
+    // Make the whole card link to a dedicated project page
+    const link = document.createElement('a');
+    link.href = `projects/${p.slug || p.id}.html`;
+    link.className = 'card-link';
+    // Move card content into the link
+    link.appendChild(card.cloneNode(true));
+    // Append the link to the grid
+    grid.appendChild(link);
   });
 }
 
