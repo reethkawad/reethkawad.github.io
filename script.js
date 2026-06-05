@@ -3,22 +3,9 @@
 //  script.js
 // ═══════════════════════════════════════════════════════════════
 
-// If a unified `PROJECTS` array is provided (site-data.js), expose it as `projects` for legacy code.
-if (typeof PROJECTS !== 'undefined') {
-  window.projects = PROJECTS;
-}
-if (typeof EXPERIENCE !== 'undefined') {
-  window.experience = EXPERIENCE;
-}
-if (typeof SKILLS !== 'undefined') {
-  window.skills = SKILLS;
-}
-
 // ── State ───────────────────────────────────────────────────
 const state = {
   activeFilter: 'all',
-  drawerOpen: false,
-  activeProjectId: null,
 };
 
 // ── Utilities ───────────────────────────────────────────────
@@ -71,10 +58,9 @@ function renderProjects() {
   if (!grid) return;
   grid.innerHTML = '';
 
-  // Use PROJECTS from data/site-data.js when available, fallback to legacy `projects`
-  const source = (typeof PROJECTS !== 'undefined') ? PROJECTS : (typeof projects !== 'undefined' ? projects : []);
+  if (typeof PROJECTS === 'undefined') return;
 
-  source.forEach(p => {
+  PROJECTS.forEach(p => {
 
     const card = document.createElement('article');
     card.className = `project-card ${zoneClass(p.zone)}`;
@@ -136,75 +122,14 @@ function applyFilter(zone) {
   });
 }
 
-// ── Drawer ───────────────────────────────────────────────────
-function openDrawer(projectId) {
-  const project = projects.find(p => p.id === projectId);
-  if (!project) return;
-
-  state.activeProjectId = projectId;
-  state.drawerOpen      = true;
-
-  const drawer  = document.getElementById('project-drawer');
-  const overlay = document.getElementById('drawer-overlay');
-  const content = document.getElementById('drawer-content');
-
-  const linksHTML = project.links.length
-    ? `<div class="drawer-links">
-         ${project.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener" class="drawer-link">${l.label} ↗</a>`).join('')}
-       </div>`
-    : '';
-
-  content.innerHTML = `
-    <div class="drawer-zone-bar ${zoneClass(project.zone)}"></div>
-    <div class="drawer-content-wrap">
-      <div class="drawer-header">
-        <div class="drawer-meta">
-          <span class="zone-badge ${zoneClass(project.zone)}">${zoneLabel(project.zone)}</span>
-          ${project.status === 'ongoing' ? '<span class="status-badge ongoing">Ongoing</span>' : ''}
-        </div>
-        <h2 class="drawer-title">${project.title}</h2>
-      </div>
-      <img src="${project.image}" alt="${project.title}" class="drawer-image" />
-      <div class="drawer-description">${project.description}</div>
-      <div class="drawer-tags">
-        ${project.tags.map(t => `<span class="tag">${t}</span>`).join('')}
-      </div>
-      ${linksHTML}
-    </div>
-  `;
-
-  // Apply zone class to drawer for CSS variable inheritance
-  drawer.className = `project-drawer open ${zoneClass(project.zone)}`;
-  overlay.classList.add('open');
-  drawer.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';
-
-  // Focus the close button for accessibility
-  requestAnimationFrame(() => {
-    const closeBtn = document.getElementById('drawer-close');
-    if (closeBtn) closeBtn.focus();
-  });
-}
-
-function closeDrawer() {
-  const drawer  = document.getElementById('project-drawer');
-  const overlay = document.getElementById('drawer-overlay');
-
-  drawer.className       = 'project-drawer';
-  overlay.classList.remove('open');
-  drawer.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';
-
-  state.drawerOpen      = false;
-  state.activeProjectId = null;
-}
-
 // ── Render: Experience ───────────────────────────────────────
 function renderExperience() {
   const list = document.getElementById('experience-list');
   if (!list) return;
 
-  list.innerHTML = experience.map(e => {
+  if (typeof EXPERIENCE === 'undefined') return;
+
+  list.innerHTML = EXPERIENCE.map(e => {
     const flowchartHTML = e.flowchart && e.flowchart.length
       ? `<div class="exp-flowchart">
            <div class="exp-flowchart-label">Work areas</div>
@@ -255,7 +180,9 @@ function renderSkills() {
   const tree = document.getElementById('skills-tree');
   if (!tree) return;
 
-  tree.innerHTML = Object.entries(skills).map(([key, zone]) => {
+  if (typeof SKILLS === 'undefined') return;
+
+  tree.innerHTML = Object.entries(SKILLS).map(([key, zone]) => {
     const categoriesHTML = zone.categories.map(cat => `
       <div class="skill-category">
         <div class="skill-category-label">${cat.label}</div>

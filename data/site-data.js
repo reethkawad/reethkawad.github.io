@@ -23,7 +23,7 @@ const PROJECTS = [
     slug: "vawt",
     title: "Vertical Axis Wind Turbine",
     zone: "cleantech",
-    thumb: "assets/vawt.jpg",
+    thumb: "assets/projects/vawt/thumb.jpg",
     summary: "Adaptive pitch control for a VAWT to enhance energy capture in low-wind urban environments.",
     description: `Engineering an adaptive pitch control system for a vertical axis wind turbine to enhance energy efficiency in low-wind environments. The focus is on optimizing blade design and mechanical power conversion through iterative simulation and physical testing. Key challenges include passive vs. active pitch mechanisms and maintaining structural integrity under variable loading.`,
     tags: ["Wind Energy", "Controls", "SolidWorks"]
@@ -32,7 +32,7 @@ const PROJECTS = [
     slug: "dexhand",
     title: "8 DoF Robotic Hand",
     zone: "robotics",
-    thumb: "assets/dexhand.png",
+    thumb: "assets/projects/dexhand/thumb.png",
     summary: "Dexterous robotic hand for USC's DRCL bipedal robot — tendon-driven with impact-tolerant MCP joints.",
     description: `Designing and building a robotic hand for the Dynamic and Robotic Controls Lab (DRCL) at USC, to be mounted on the bipedal robot Hector. The hand has two fingers and a thumb across 8 degrees of freedom...`,
     tags: ["Robotics", "Mechanical Design", "Actuation"]
@@ -41,7 +41,7 @@ const PROJECTS = [
     slug: "windtunnel",
     title: "Blowdown Wind Tunnel",
     zone: "hardware",
-    thumb: "assets/windtunnel.jpg",
+    thumb: "assets/projects/windtunnel/thumb.jpg",
     summary: "Designed and fabricated a 1.5 m blowdown wind tunnel validating honeycomb flow straighteners.",
     description: `Designed and built a 1.5-meter-long blowdown wind tunnel with a 100×100 mm² test section, primarily using plywood and acrylic...`,
     tags: ["Aerodynamics", "Fabrication", "Flow Testing"]
@@ -50,7 +50,7 @@ const PROJECTS = [
     slug: "firewarden",
     title: "Wildfire Defense Water Pump",
     zone: "cleantech",
-    thumb: "assets/firewarden.jpg",
+    thumb: "assets/projects/firewarden/thumb.jpg",
     summary: "Pool-fed automated spray system with MATLAB-modeled hydraulics for Palisades wildfire defense.",
     description: `Developed a water pump system for wildfire protection by integrating a pool-based spray network with manual activation...`,
     tags: ["Cleantech", "Fluid Systems", "MATLAB"]
@@ -59,7 +59,7 @@ const PROJECTS = [
     slug: "fsae",
     title: "FSAE Projects",
     zone: "hardware",
-    thumb: "assets/fsaecar.jpg",
+    thumb: "assets/projects/fsae/thumb.jpg",
     summary: "Aero parts, CFD automation, custom tools, and CNC manufacturing for a Formula SAE race car.",
     description: `Multiple subsystem contributions to the USC Formula SAE team across aerodynamics, tooling, and manufacturing...`,
     tags: ["Automotive", "CFD", "CNC"]
@@ -68,7 +68,7 @@ const PROJECTS = [
     slug: "waterrocket",
     title: "Water Rocket Flight Optimization",
     zone: "hardware",
-    thumb: "assets/WaterRocketPhoto.JPG",
+    thumb: "assets/projects/waterrocket/thumb.JPG",
     summary: "MATLAB simulation optimizing air/water ratio, pressure, and parachute size for maximum altitude.",
     description: `Developed a MATLAB simulation to optimize a water rocket's air-to-water fill ratio, initial pressure, and parachute surface area...`,
     tags: ["MATLAB", "Simulation", "Optimization"]
@@ -77,7 +77,7 @@ const PROJECTS = [
     slug: "drone",
     title: "Drone CAD & Structural Analysis",
     zone: "hardware",
-    thumb: "assets/drone.png",
+    thumb: "assets/projects/drone/thumb.png",
     summary: "Full quadrotor drone CAD in Siemens NX with FEA and multi-body dynamics for structural validation.",
     description: `Designed a quadrotor drone frame using Siemens NX CAD and conducted comprehensive structural validation using FEA and MBD in ANSYS...`,
     tags: ["CAD", "FEA", "Drones"]
@@ -86,7 +86,7 @@ const PROJECTS = [
     slug: "bridge",
     title: "Truss Bridge Optimization",
     zone: "hardware",
-    thumb: "assets/bridge.png",
+    thumb: "assets/projects/bridge/thumb.png",
     summary: "Parametric MATLAB truss analysis optimizing bridge geometry for maximum load-to-weight ratio.",
     description: `Modeled and analyzed truss bridge forces using parametric MATLAB simulations...`,
     tags: ["Structural", "MATLAB", "Optimization"]
@@ -95,7 +95,7 @@ const PROJECTS = [
     slug: "monopoly",
     title: "Automated Monopoly Board",
     zone: "hardware",
-    thumb: "assets/monopoly.png",
+    thumb: "assets/projects/monopoly/thumb.png",
     summary: "Electromechanical Monopoly board enabling human vs. bot gameplay — 1st place finish.",
     description: `Led the electro-mechanical design of a robotic Monopoly board game...`,
     tags: ["Mechatronics", "Arduino", "Fabrication"]
@@ -104,7 +104,7 @@ const PROJECTS = [
     slug: "walkane",
     title: "Walkane — Walker-Cane Hybrid",
     zone: "hardware",
-    thumb: "assets/walkane_real.png",
+    thumb: "assets/projects/walkane/thumb.png",
     summary: "Collapsible assistive device bridging cane and walker — 2nd place in competition.",
     description: `Engineered a hybrid walker-cane with a collapsible mechanism designed to improve stability during transitions...`,
     tags: ["Product Design", "Prototyping"]
@@ -113,7 +113,7 @@ const PROJECTS = [
     slug: "alarm",
     title: "Smart Alarm Clock — REM Monitoring",
     zone: "hardware",
-    thumb: "assets/alarm.png",
+    thumb: "assets/projects/alarm/thumb.png",
     summary: "Arduino DAQ alarm that tracks BPM to wake users during optimal REM sleep — 1st place hackathon.",
     description: `Built a smart alarm clock integrating a pulse oximeter sensor and Arduino-based DAQ to track heart rate...`,
     tags: ["Arduino", "Sensors"]
@@ -122,7 +122,7 @@ const PROJECTS = [
     slug: "kothcar",
     title: "2-DoF Bluetooth Car",
     zone: "robotics",
-    thumb: "assets/kothcar.jpg",
+    thumb: "assets/projects/kothcar/thumb.jpg",
     summary: "Custom-built Arduino car with Bluetooth remote control and two-axis steering.",
     description: `Designed and built a two-degree-of-freedom remote-controlled car with Bluetooth communication...`,
     tags: ["Arduino", "Fabrication"]

@@ -1,18 +1,18 @@
 REETH S. KAWAD
 
-Mechanical Engineering · USC  |  Controls · Robotics · Thermofluids · Instrumentation · Hardware Testing
+Mechanical Engineering · USC | Controls · Robotics · Thermofluids · Instrumentation · Hardware Testing
 
-kawad@usc.edu  |  (213) 512-8528  |  LinkedIn  |  Portfolio
+kawad@usc.edu | (213) 512-8528 | LinkedIn | Portfolio
 
 ABOUT ME
 
 LinkedIn Headline Options
 
-Option A:  Mechanical Engineering @ USC | Controls · Robotics · Sensing | GrayMatter Robotics · Lumindt · Wind Energy
+Option A: Mechanical Engineering @ USC | Controls · Robotics · Sensing | GrayMatter Robotics · Lumindt · Wind Energy
 
-Option B:  Hardware Engineer | Controls, Mechatronics & Thermofluids | Building systems that sense, actuate, and adapt
+Option B: Hardware Engineer | Controls, Mechatronics & Thermofluids | Building systems that sense, actuate, and adapt
 
-Option C:  ME @ USC | Robotics Systems · Clean Energy · Instrumentation | Co-Founder FireWarden · $20K Prize Winner
+Option C: ME @ USC | Robotics Systems · Clean Energy · Instrumentation | Co-Founder FireWarden · $20K Prize Winner
 
 Short Bio (Portfolio About Page / LinkedIn Summary)
 
@@ -84,21 +84,21 @@ Networking: Template 3. Ask about their work first. Mention shared domain, not y
 
 WORK EXPERIENCE
 
-GrayMatter Robotics  —  Robotics Systems & Applications Intern
+GrayMatter Robotics — Robotics Systems & Applications Intern
 
-Jan 2026 – May 2026  |  Robotic surface finishing & automation  |  Torrance, CA
+Jan 2026 – May 2026 | Robotic surface finishing & automation | Torrance, CA
 
-Project 1: Production-Ready Universal Sanding Fixture  ★ Hero Project
+Project 1: Production-Ready Universal Sanding Fixture ★ Hero Project
 
-SolidWorks  ·  MeshLab  ·  Point Cloud Processing  ·  Spring-Loaded Mechanisms  ·  Computer Vision Integration  ·  Force Testing  ·  3D Printing  ·  Rapid Prototyping  ·  ROS2  ·  Cross-functional
+SolidWorks · MeshLab · Point Cloud Processing · Spring-Loaded Mechanisms · Computer Vision Integration · Force Testing · 3D Printing · Rapid Prototyping · ROS2 · Cross-functional
 
 S
 
-SITUATION  The initial fixture designs for a high-value customer part caused the robot to sand the fixture itself — the vision segmentation algorithm could not distinguish fixture geometry from the workpiece. The product line had 14 SKUs ranging S to XL.
+SITUATION The initial fixture designs for a high-value customer part caused the robot to sand the fixture itself — the vision segmentation algorithm could not distinguish fixture geometry from the workpiece. The product line had 14 SKUs ranging S to XL.
 
 T
 
-TASK  Redesign the fixture from scratch to hold all 14 configurations reliably, eliminate vision misclassification, and meet customer requirements for operator comfort, throughput, and reliability.
+TASK Redesign the fixture from scratch to hold all 14 configurations reliably, eliminate vision misclassification, and meet customer requirements for operator comfort, throughput, and reliability.
 
 ACTION
 
@@ -128,15 +128,15 @@ Cross-disciplinary scope: mechanical design + vision integration + experimental 
 
 Project 2: Systems & Applications Engineering — Robotic Arm Process Development
 
-ROS2  ·  RVIZ  ·  MeshLab  ·  Point Cloud Segmentation  ·  Toolpath Planning  ·  FANUC Arms  ·  Python  ·  YAML/JSON  ·  DOE  ·  Sensor Calibration  ·  GitHub
+ROS2 · RVIZ · MeshLab · Point Cloud Segmentation · Toolpath Planning · FANUC Arms · Python · YAML/JSON · DOE · Sensor Calibration · GitHub
 
 S
 
-SITUATION  GrayMatter deploys robotic sanding arms on customer parts (helicopter blades, helmets, vehicle body panels) — each requiring custom segmentation, toolpath planning, and sanding recipe validation before deployment.
+SITUATION GrayMatter deploys robotic sanding arms on customer parts (helicopter blades, helmets, vehicle body panels) — each requiring custom segmentation, toolpath planning, and sanding recipe validation before deployment.
 
 T
 
-TASK  Lead system and applications engineering for customer parts: from 3D scan through segmentation, toolpath generation, FANUC robot programming, and process recipe development.
+TASK Lead system and applications engineering for customer parts: from 3D scan through segmentation, toolpath generation, FANUC robot programming, and process recipe development.
 
 ACTION
 
@@ -168,15 +168,15 @@ Reduced manual effort in segmentation and toolpath setup through Python automati
 
 Project 3: Multimodal Human Sanding Characterization DAQ Pipeline
 
-Force Sensors  ·  IMUs  ·  OpenVR Position Tracking  ·  Thermal Sensors  ·  Multimodal DAQ  ·  Python  ·  ROS2  ·  Rerun Visualisation  ·  Hardware-in-the-Loop  ·  Post-Processing Analytics  ·  Industrial Time Studies
+Force Sensors · IMUs · OpenVR Position Tracking · Thermal Sensors · Multimodal DAQ · Python · ROS2 · Rerun Visualisation · Hardware-in-the-Loop · Post-Processing Analytics · Industrial Time Studies
 
 S
 
-SITUATION  GrayMatter needed to understand expert human sanding behaviour at a physical parameter level — force profiles, motion patterns, thermal signatures — to automate industrial engineering time studies and build a solutions-engineering intelligence layer for robot process development.
+SITUATION GrayMatter needed to understand expert human sanding behaviour at a physical parameter level — force profiles, motion patterns, thermal signatures — to automate industrial engineering time studies and build a solutions-engineering intelligence layer for robot process development.
 
 T
 
-TASK  Build a multimodal DAQ pipeline synchronising force, IMU, position (OpenVR), and thermal sensor streams at 100+ Hz in hardware-in-the-loop conditions, with a full post-processing analytics layer to characterise human sanding processes and drive robot feasibility decisions.
+TASK Build a multimodal DAQ pipeline synchronising force, IMU, position (OpenVR), and thermal sensor streams at 100+ Hz in hardware-in-the-loop conditions, with a full post-processing analytics layer to characterise human sanding processes and drive robot feasibility decisions.
 
 ACTION
 
@@ -202,21 +202,21 @@ Task classification output gives engineering teams a data-backed map of what a r
 
 Produced a reusable, modular platform (DAQ + visualisation + analytics) feeding GrayMatter's process intelligence roadmap.
 
-Lumindt Labs  —  Mechanical Engineering Intern
+Lumindt Labs — Mechanical Engineering Intern
 
-Jun 2025 – Aug 2025  |  Thermal energy storage & hydrogen systems startup
+Jun 2025 – Aug 2025 | Thermal energy storage & hydrogen systems startup
 
 Project 1: Transient Hot-Wire Thermal Conductivity Measurement System
 
-Transient Hot-Wire  ·  Platinum Wire Sensor (25μm)  ·  Signal Conditioning  ·  Raspberry Pi DAQ  ·  Python  ·  SolidWorks  ·  Uncertainty Analysis  ·  Thermal Conductivity  ·  Metal Powders
+Transient Hot-Wire · Platinum Wire Sensor (25μm) · Signal Conditioning · Raspberry Pi DAQ · Python · SolidWorks · Uncertainty Analysis · Thermal Conductivity · Metal Powders
 
 S
 
-SITUATION  Lumindt needed thermal conductivity data for metal powders being evaluated for thermal energy storage. No commercial instrument was suited to the specific material form factor; a custom solution was required.
+SITUATION Lumindt needed thermal conductivity data for metal powders being evaluated for thermal energy storage. No commercial instrument was suited to the specific material form factor; a custom solution was required.
 
 T
 
-TASK  Design and build a complete thermal conductivity measurement system from scratch capable of repeatable, accurate characterisation of four metal powder samples to support material down-selection.
+TASK Design and build a complete thermal conductivity measurement system from scratch capable of repeatable, accurate characterisation of four metal powder samples to support material down-selection.
 
 ACTION
 
@@ -244,15 +244,15 @@ Created a complete characterisation capability from zero — integrating heat tr
 
 Project 2: Structural Design — Electrolyser Skid & Fuel Cell Frame
 
-SolidWorks Weldments  ·  Structural Calculations  ·  ASME Stress Analysis  ·  Manifold Design  ·  Steel Frame Design  ·  8020 Extrusions  ·  Hydrogen Line Routing  ·  Serviceability
+SolidWorks Weldments · Structural Calculations · ASME Stress Analysis · Manifold Design · Steel Frame Design · 8020 Extrusions · Hydrogen Line Routing · Serviceability
 
 S
 
-SITUATION  Lumindt needed production-ready structural hardware: a skid to house 24 electrolysers (300 kg each) and a modular frame for a 250 kW fuel cell system (200 kg capacity).
+SITUATION Lumindt needed production-ready structural hardware: a skid to house 24 electrolysers (300 kg each) and a modular frame for a 250 kW fuel cell system (200 kg capacity).
 
 T
 
-TASK  Design both structures to meet load requirements, integrate fluid manifolds (hydrogen, coolant, water), minimise footprint, and ensure serviceability — validated against ASME standards.
+TASK Design both structures to meet load requirements, integrate fluid manifolds (hydrogen, coolant, water), minimise footprint, and ensure serviceability — validated against ASME standards.
 
 ACTION
 
@@ -274,19 +274,19 @@ Manifold design met hydrogen, coolant, and water routing requirements within the
 
 Demonstrated ability to work across mechanical design, structural analysis, fluid systems, and component selection within a single engineering workstream.
 
-USC Baum Family Makerspace  —  Machinist & Fabrication Engineer
+USC Baum Family Makerspace — Machinist & Fabrication Engineer
 
-Sep 2023 – Present  |  Precision machining, prototyping, and manufacturing support
+Sep 2023 – Present | Precision machining, prototyping, and manufacturing support
 
-Haas CNC Mill  ·  CNC Lathe  ·  ProtoTRAK  ·  Omax Waterjet  ·  Laser Cutter  ·  MasterCam  ·  GD&T  ·  DFM  ·  3D Printing (FDM/SLA/Carbon Fibre)  ·  Chemical Support Removal  ·  Dial Indicator
+Haas CNC Mill · CNC Lathe · ProtoTRAK · Omax Waterjet · Laser Cutter · MasterCam · GD&T · DFM · 3D Printing (FDM/SLA/Carbon Fibre) · Chemical Support Removal · Dial Indicator
 
 S
 
-SITUATION  The Makerspace supports 80+ research labs and 12+ design teams at USC who need precision components fabricated beyond student skill level, and who need DFM guidance to make their designs manufacturable.
+SITUATION The Makerspace supports 80+ research labs and 12+ design teams at USC who need precision components fabricated beyond student skill level, and who need DFM guidance to make their designs manufacturable.
 
 T
 
-TASK  Manufacture GD&T-critical components across a range of processes, support prototype development, and help engineering teams design for manufacturability.
+TASK Manufacture GD&T-critical components across a range of processes, support prototype development, and help engineering teams design for manufacturability.
 
 ACTION
 
@@ -312,19 +312,19 @@ Fabricated 100+ prototypes across three 3D printing technologies; chemical suppo
 
 DFM guidance demonstrably reduced iteration cycles for multiple teams by catching manufacturability issues at the design stage.
 
-USC Dynamic Robotics & Controls Lab  —  Mechanical Engineer
+USC Dynamic Robotics & Controls Lab — Mechanical Engineer
 
-Sep 2025 – Present  |  Robotic hand design and compliant actuation
+Sep 2025 – Present | Robotic hand design and compliant actuation
 
-SolidWorks  ·  MuJoCo Simulation  ·  Series Elastic Actuator  ·  N20 Motor  ·  C++ Motor Driver  ·  Parallel Link Mechanism  ·  Force Feedback  ·  Torque Analysis  ·  Rapid Prototyping
+SolidWorks · MuJoCo Simulation · Series Elastic Actuator · N20 Motor · C++ Motor Driver · Parallel Link Mechanism · Force Feedback · Torque Analysis · Rapid Prototyping
 
 S
 
-SITUATION  The lab is developing an 8-DOF robotic hand (two fingers, thumb, 2-DOF wrist) capable of catching and throwing a basketball at 20 N force — requiring compliant actuation for safe, controllable contact.
+SITUATION The lab is developing an 8-DOF robotic hand (two fingers, thumb, 2-DOF wrist) capable of catching and throwing a basketball at 20 N force — requiring compliant actuation for safe, controllable contact.
 
 T
 
-TASK  Design and prototype the Series Elastic Actuator (SEA) module and rigid finger joints with parallel link mechanism, and validate force feedback fidelity through bench testing.
+TASK Design and prototype the Series Elastic Actuator (SEA) module and rigid finger joints with parallel link mechanism, and validate force feedback fidelity through bench testing.
 
 ACTION
 
@@ -346,19 +346,19 @@ Parallel-link finger joints designed and iterated in SolidWorks; prototypes fabr
 
 Built practical expertise in compliant actuation design, motor sizing, C++ embedded control, and simulation-to-hardware workflows.
 
-USC Robotic Locomotion & Dynamic Lab  —  Mechanical Design Engineer
+USC Robotic Locomotion & Dynamic Lab — Mechanical Design Engineer
 
-Sep 2023 – May 2024  |  Quadrupedal robot leg mechanism design
+Sep 2023 – May 2024 | Quadrupedal robot leg mechanism design
 
-Siemens NX  ·  ANSYS Mechanical FEA  ·  4-Link Leg Mechanism  ·  Force-Sensing  ·  Direct Drive  ·  Custom Holding Frame  ·  Terrain Navigation
+Siemens NX · ANSYS Mechanical FEA · 4-Link Leg Mechanism · Force-Sensing · Direct Drive · Custom Holding Frame · Terrain Navigation
 
 S
 
-SITUATION  The lab was developing a direct-drive quadrupedal robot for complex terrain navigation and needed a leg mechanism that could sense contact forces while handling dynamic loading.
+SITUATION The lab was developing a direct-drive quadrupedal robot for complex terrain navigation and needed a leg mechanism that could sense contact forces while handling dynamic loading.
 
 T
 
-TASK  Design a 4-link leg mechanism with custom holding frame for a force-sensing direct-drive quadruped, validated structurally for terrain navigation loads.
+TASK Design a 4-link leg mechanism with custom holding frame for a force-sensing direct-drive quadruped, validated structurally for terrain navigation loads.
 
 ACTION
 
@@ -374,19 +374,19 @@ Delivered a validated mechanism design meeting the lab's range-of-motion and str
 
 Developed practical experience in linkage mechanism design and FEA-driven structural validation.
 
-TuTr Hyperloop  —  Mechanical Engineer Intern
+TuTr Hyperloop — Mechanical Engineer Intern
 
-Jun 2024 – Jul 2024  |  Hyperloop chassis structural optimisation
+Jun 2024 – Jul 2024 | Hyperloop chassis structural optimisation
 
-ANSYS Mechanical  ·  Siemens NX  ·  1D Structural Analysis  ·  3D FEA  ·  Chassis Optimisation  ·  Weight Reduction
+ANSYS Mechanical · Siemens NX · 1D Structural Analysis · 3D FEA · Chassis Optimisation · Weight Reduction
 
 S
 
-SITUATION  TuTr's hyperloop pod chassis needed to be lighter without compromising structural integrity for high-speed travel loads.
+SITUATION TuTr's hyperloop pod chassis needed to be lighter without compromising structural integrity for high-speed travel loads.
 
 T
 
-TASK  Analyse the existing chassis design and identify weight reduction opportunities while maintaining structural safety margins.
+TASK Analyse the existing chassis design and identify weight reduction opportunities while maintaining structural safety margins.
 
 ACTION
 
@@ -398,19 +398,19 @@ RESULT
 
 Optimised chassis weight by 30% while maintaining full structural integrity under operating load cases.
 
-National Institute of Wind Energy (NIWE)  —  Wind Blade Intern
+National Institute of Wind Energy (NIWE) — Wind Blade Intern
 
-Jul 2023 – Aug 2023  |  Wind turbine blade design & analysis  |  Chennai, India
+Jul 2023 – Aug 2023 | Wind turbine blade design & analysis | Chennai, India
 
-SolidWorks  ·  ANSYS Mechanical  ·  Blade Load Cases  ·  Certification Standards  ·  Structural Optimisation
+SolidWorks · ANSYS Mechanical · Blade Load Cases · Certification Standards · Structural Optimisation
 
 S
 
-SITUATION  NIWE's certification department needed a research-grade analysis of a 5.7 m wind turbine blade across multiple load cases to support their certification workflow.
+SITUATION NIWE's certification department needed a research-grade analysis of a 5.7 m wind turbine blade across multiple load cases to support their certification workflow.
 
 T
 
-TASK  Design, analyse, and optimise the blade geometry in SolidWorks and ANSYS Mechanical, evaluating structural performance across defined load cases.
+TASK Design, analyse, and optimise the blade geometry in SolidWorks and ANSYS Mechanical, evaluating structural performance across defined load cases.
 
 ACTION
 
@@ -426,19 +426,19 @@ Delivered a complete blade analysis report to the certification department.
 
 Gained practical exposure to industrial wind blade design standards and certification workflows.
 
-FireWarden  —  Co-Founder & CTO
+FireWarden — Co-Founder & CTO
 
-Jan 2025 – Sep 2025  |  Wildfire mitigation startup  |  $20K InnovateLA · Techstars Pre-Accelerator
+Jan 2025 – Sep 2025 | Wildfire mitigation startup | $20K InnovateLA · Techstars Pre-Accelerator
 
-First-Principles Fluid Dynamics  ·  Sprinkler System Engineering  ·  Web Application  ·  Satellite/Elevation Data  ·  Customer Discovery  ·  Pitch Competitions  ·  Techstars
+First-Principles Fluid Dynamics · Sprinkler System Engineering · Web Application · Satellite/Elevation Data · Customer Discovery · Pitch Competitions · Techstars
 
 S
 
-SITUATION  Wildfires are a growing risk for homeowners; most mitigation solutions are expensive, complex, and difficult to evaluate. No accessible tool existed for homeowners to size and plan a sprinkler-based defence system.
+SITUATION Wildfires are a growing risk for homeowners; most mitigation solutions are expensive, complex, and difficult to evaluate. No accessible tool existed for homeowners to size and plan a sprinkler-based defence system.
 
 T
 
-TASK  Co-found the startup and lead technical development of a software engineering calculator that made wildfire sprinkler system design accessible — starting with pool-sourced systems.
+TASK Co-found the startup and lead technical development of a software engineering calculator that made wildfire sprinkler system design accessible — starting with pool-sourced systems.
 
 ACTION
 
@@ -462,21 +462,21 @@ Although FireWarden ceased operations, built strong foundations in startup strat
 
 LEADERSHIP & INVOLVEMENT
 
-USC Collegiate Wind Competition (AEE)  —  Founder & Team Lead
+USC Collegiate Wind Competition (AEE) — Founder & Team Lead
 
-Dec 2024 – May 2026  |  DOE Collegiate Wind Competition  |  Also: AEE Director of Outreach
+Dec 2024 – May 2026 | DOE Collegiate Wind Competition | Also: AEE Director of Outreach
 
 Electronics, Controls & Firmware
 
-Arduino Firmware  ·  RPM/Voltage/Current Sensors  ·  I2C Architecture  ·  MOSFETs  ·  Buck-Boost Converter  ·  Electrical Braking  ·  Power Resistors  ·  Oscilloscope  ·  Soldering  ·  State Machine
+Arduino Firmware · RPM/Voltage/Current Sensors · I2C Architecture · MOSFETs · Buck-Boost Converter · Electrical Braking · Power Resistors · Oscilloscope · Soldering · State Machine
 
 S
 
-SITUATION  USC had no CWC team. The turbine's complete electrical and controls system needed to be designed from scratch by a mechanical engineer with limited prior electronics experience.
+SITUATION USC had no CWC team. The turbine's complete electrical and controls system needed to be designed from scratch by a mechanical engineer with limited prior electronics experience.
 
 T
 
-TASK  Design and implement end-to-end electronics and controls: schematics, sensor integration, firmware, braking system, and bench validation.
+TASK Design and implement end-to-end electronics and controls: schematics, sensor integration, firmware, braking system, and bench validation.
 
 ACTION
 
@@ -500,15 +500,15 @@ State machine correctly sequences through all turbine operating modes with valid
 
 Turbine Mechanical Design & Project Development
 
-Siemens NX  ·  QBlade  ·  StarCCM+  ·  Blade Aerodynamics  ·  FLORIS Wake Optimiser  ·  Wind Farm Layout  ·  Grid Interconnection  ·  Site Assessment  ·  Project Management
+Siemens NX · QBlade · StarCCM+ · Blade Aerodynamics · FLORIS Wake Optimiser · Wind Farm Layout · Grid Interconnection · Site Assessment · Project Management
 
 S
 
-SITUATION  Beyond controls, the team needed a full turbine mechanical design and a utility-scale wind farm project development analysis to meet DOE competition deliverables.
+SITUATION Beyond controls, the team needed a full turbine mechanical design and a utility-scale wind farm project development analysis to meet DOE competition deliverables.
 
 T
 
-TASK  Lead turbine mechanical design and the project development sub-team covering site assessment, grid interconnection, and financial/policy planning.
+TASK Lead turbine mechanical design and the project development sub-team covering site assessment, grid interconnection, and financial/policy planning.
 
 ACTION
 
@@ -532,19 +532,19 @@ Built FLORIS-based wind farm layout optimiser; developed end-to-end utility-scal
 
 AEE chapter now operating with established industry partnerships and faculty engagement.
 
-Formula SAE (SC Racing)  —  Aerodynamics & Vehicle Dynamics Engineer
+Formula SAE (SC Racing) — Aerodynamics & Vehicle Dynamics Engineer
 
-Jan 2023 – Present  |  CFD automation · Composite fabrication · Validation tools
+Jan 2023 – Present | CFD automation · Composite fabrication · Validation tools
 
-ANSYS Fluent  ·  MATLAB Automation  ·  CFD Meshing  ·  Composite Layup  ·  Resin Infusion  ·  CNC Mould Milling  ·  Yaw Probe  ·  Toe Alignment Tool  ·  Siemens NX  ·  GD&T
+ANSYS Fluent · MATLAB Automation · CFD Meshing · Composite Layup · Resin Infusion · CNC Mould Milling · Yaw Probe · Toe Alignment Tool · Siemens NX · GD&T
 
 S
 
-SITUATION  The team needed faster aerodynamic simulation iteration and tighter correlation between CFD predictions and physical test results.
+SITUATION The team needed faster aerodynamic simulation iteration and tighter correlation between CFD predictions and physical test results.
 
 T
 
-TASK  Improve aero development efficiency through simulation automation and build physical validation tools to close the simulation-to-hardware loop.
+TASK Improve aero development efficiency through simulation automation and build physical validation tools to close the simulation-to-hardware loop.
 
 ACTION
 
@@ -568,15 +568,15 @@ INDEPENDENT PROJECTS
 
 Adaptive Pitch Control — 5" H-Type Vertical Axis Wind Turbine
 
-Bayesian Optimisation  ·  PID Control  ·  Blade Pitch Mechanism  ·  Wind Tunnel Testing  ·  Cp vs Wind Speed Analysis  ·  Fabrication
+Bayesian Optimisation · PID Control · Blade Pitch Mechanism · Wind Tunnel Testing · Cp vs Wind Speed Analysis · Fabrication
 
 S
 
-SITUATION  VAWTs commonly operate below their theoretical aerodynamic efficiency due to fixed blade pitch — particularly at off-design wind speeds.
+SITUATION VAWTs commonly operate below their theoretical aerodynamic efficiency due to fixed blade pitch — particularly at off-design wind speeds.
 
 T
 
-TASK  Design, fabricate, and test a 5-inch H-type VAWT with individual blade pitch control, using Bayesian Optimisation and PID to improve efficiency across operating conditions.
+TASK Design, fabricate, and test a 5-inch H-type VAWT with individual blade pitch control, using Bayesian Optimisation and PID to improve efficiency across operating conditions.
 
 ACTION
 
@@ -596,15 +596,15 @@ Built practical expertise in control algorithm implementation (Bayesian Opt + PI
 
 Honeycomb Flow Straightener Wind Tunnel Study
 
-Wind Tunnel Design  ·  Honeycomb Flow Straightener  ·  Pitot Tube Measurement  ·  Turbulence Intensity  ·  Fabrication (Plywood/Acrylic/PLA)
+Wind Tunnel Design · Honeycomb Flow Straightener · Pitot Tube Measurement · Turbulence Intensity · Fabrication (Plywood/Acrylic/PLA)
 
 S
 
-SITUATION  Wind tunnel turbulence reduces measurement repeatability and test quality.
+SITUATION Wind tunnel turbulence reduces measurement repeatability and test quality.
 
 T
 
-TASK  Design, build, and experimentally validate a 20-inch blow-down wind tunnel with a honeycomb flow straightener to quantify turbulence reduction.
+TASK Design, build, and experimentally validate a 20-inch blow-down wind tunnel with a honeycomb flow straightener to quantify turbulence reduction.
 
 ACTION
 
@@ -618,17 +618,17 @@ Turbulence intensity reduced by 53% at the front measurement location.
 
 Turbulence intensity reduced by 86% at the rear measurement location.
 
-Smart Alarm Clock with REM Sleep Monitoring  🏆 1st Place IEEE Hack-IoT
+Smart Alarm Clock with REM Sleep Monitoring 🏆 1st Place IEEE Hack-IoT
 
-Arduino DAQ  ·  Pulse Meter  ·  BPM Tracking  ·  Sleep Cycle Analysis  ·  Embedded Systems
+Arduino DAQ · Pulse Meter · BPM Tracking · Sleep Cycle Analysis · Embedded Systems
 
 S
 
-SITUATION  Standard alarms wake users regardless of sleep stage, leading to grogginess.
+SITUATION Standard alarms wake users regardless of sleep stage, leading to grogginess.
 
 T
 
-TASK  Build a smart alarm clock that tracks BPM via pulse meter and Arduino DAQ, uses sleep cycle data to wake the user during optimal REM phase.
+TASK Build a smart alarm clock that tracks BPM via pulse meter and Arduino DAQ, uses sleep cycle data to wake the user during optimal REM phase.
 
 ACTION
 
@@ -642,17 +642,17 @@ RESULT
 
 Won 1st place at the IEEE Hack-IoT competition.
 
-Walkane — Collapsible Walker-Cane Hybrid  🏆 2nd Place ASBME Makeathon
+Walkane — Collapsible Walker-Cane Hybrid 🏆 2nd Place ASBME Makeathon
 
-Mechanism Design  ·  Collapsible Structure  ·  Medical Device  ·  DFM  ·  Rapid Prototyping
+Mechanism Design · Collapsible Structure · Medical Device · DFM · Rapid Prototyping
 
 S
 
-SITUATION  Existing walkers and canes handle flat ground or stairs poorly — transitions between the two are unstable and risky for elderly users.
+SITUATION Existing walkers and canes handle flat ground or stairs poorly — transitions between the two are unstable and risky for elderly users.
 
 T
 
-TASK  Engineer a hybrid walker-cane with a collapsible design that improves stability during stair-to-flat-ground transitions.
+TASK Engineer a hybrid walker-cane with a collapsible design that improves stability during stair-to-flat-ground transitions.
 
 ACTION
 
@@ -800,11 +800,11 @@ Skills used: [Tool1 · Tool2 · Technique1 · Technique2]
 
 S
 
-SITUATION  [Describe the context — what problem existed, what was the company trying to do?]
+SITUATION [Describe the context — what problem existed, what was the company trying to do?]
 
 T
 
-TASK  [What were YOU specifically asked or responsible for?]
+TASK [What were YOU specifically asked or responsible for?]
 
 ACTION
 
@@ -834,4 +834,4 @@ Quick result prompts: How much faster / lighter / more accurate? What decision d
 
 Skills row tip: List the 6–10 most searchable/specific tools and techniques. These map directly to recruiter keyword searches and ATS systems.
 
-Reeth S. Kawad  ·  Master Career Reference  ·  USC Mechanical Engineering  ·  Graduating May 2026  ·  Actively seeking full-time roles
+Reeth S. Kawad · Master Career Reference · USC Mechanical Engineering · Graduating May 2026 · Actively seeking full-time roles
