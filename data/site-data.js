@@ -321,7 +321,75 @@ const EXPERIENCE = [
     zone: "robotics",
     bullets: [
       "Led mechanical design for a production-ready universal sanding fixture accommodating 14 SKUs; eliminated vision misclassification and validated performance through force testing.",
-      "Built a multimodal DAQ pipeline and analytics for sanding characterisation, reducing industrial engineering time studies by ~40% and producing a reusable analytics/visualisation stack."
+      "Built a multimodal DAQ pipeline and analytics for sanding characterisation, reducing industrial engineering time studies by ~40%."
+    ],
+    subprojects: [
+      {
+        title: "Production-Ready Universal Sanding Fixture",
+        tools: ["SolidWorks", "MeshLab", "Point Cloud Processing", "Spring-Loaded Mechanisms", "Force Testing", "3D Printing", "ROS2"],
+        gallery: [],
+        star: {
+          situation: "Initial fixture designs caused the robot to sand the fixture itself — vision segmentation could not distinguish fixture geometry from the workpiece. The product line had 14 SKUs ranging S to XL.",
+          task: "Redesign the fixture from scratch to hold all 14 configurations reliably, eliminate vision misclassification, and meet customer requirements for operator comfort, throughput, and reliability.",
+          action: [
+            "Mapped all mechanical, vision, and software constraints across teams before touching a design.",
+            "Developed SolidWorks concepts and analysed point clouds in MeshLab — tuned segmentation parameters iteratively with the vision team.",
+            "Introduced compliant spring-loaded features to accommodate S–XL size variation without manual adjustment between variants.",
+            "Incorporated displacement sensors to validate part seating before the sanding cycle begins.",
+            "Performed force testing to identify failure modes and quantify performance improvements across design iterations.",
+            "Executed rapid prototyping cycles using 3D printing and modular design for fast mechanical iteration."
+          ],
+          result: [
+            "Universal fixture successfully accommodated all 14 SKUs (S through XL) in a single design.",
+            "Eliminated vision misclassification — robot no longer sanded the fixture itself.",
+            "Customer confirmed strong satisfaction with robustness and performance outcomes."
+          ]
+        }
+      },
+      {
+        title: "Systems & Applications Engineering — Robotic Arm Process Development",
+        tools: ["ROS2", "RVIZ", "MeshLab", "FANUC Arms", "Python", "YAML/JSON", "DOE", "GitHub"],
+        gallery: [],
+        star: {
+          situation: "GrayMatter deploys robotic sanding arms on customer parts (helicopter blades, helmets, vehicle body panels) — each requiring custom segmentation, toolpath planning, and recipe validation before deployment.",
+          task: "Lead system and applications engineering for customer parts: from 3D scan through segmentation, toolpath generation, FANUC robot programming, and process recipe development.",
+          action: [
+            "Conducted reachability studies from CAD models to identify surface coverage and blind spots before physical setup.",
+            "Worked with multiple segmentation algorithms on point clouds (Euclidean clustering, curvature-based, projection segmentation, swept cylinder, surface normals) in MeshLab.",
+            "Developed toolpaths by tuning CNT values, tool orientation, overlap percentage, and pass direction — balancing coverage, cycle time, and surface finish.",
+            "Programmed FANUC robotic arms to execute validated toolpaths, handling coordinate frame setup and motion parameter tuning.",
+            "Designed and executed DOE-driven sanding campaigns — sweeping force, tilt angle, and RPM — identifying parameters meeting surface roughness within ±10% spec.",
+            "Managed project files with GitHub; used YAML/JSON for process parameter storage and ROS2 pipeline configuration."
+          ],
+          result: [
+            "Developed end-to-end proficiency in robotic process engineering: raw point cloud to deployed, validated robot program.",
+            "Built practical expertise in ROS2 + RVIZ, MeshLab automation, FANUC programming, and process-DOE methodology.",
+            "Reduced manual effort in segmentation and toolpath setup through Python automation scripts."
+          ]
+        }
+      },
+      {
+        title: "Multimodal Human Sanding Characterisation DAQ Pipeline",
+        tools: ["Force Sensors", "IMUs", "OpenVR", "Thermal Sensors", "Python", "ROS2", "Rerun Visualisation"],
+        gallery: [],
+        star: {
+          situation: "GrayMatter needed to understand expert human sanding behaviour at a physical parameter level — force profiles, motion patterns, thermal signatures — to automate industrial engineering time studies.",
+          task: "Build a multimodal DAQ pipeline synchronising force, IMU, position (OpenVR), and thermal sensor streams at 100+ Hz with a full post-processing analytics layer.",
+          action: [
+            "Selected and integrated force sensors, IMUs, OpenVR position trackers, and thermal sensors into a time-synchronised ROS2 pipeline running at 100+ Hz.",
+            "Integrated Rerun for real-time and post-hoc visualisation of 3D sanding paths with per-segment physical parameter graphing.",
+            "Built a post-processing analytics pipeline: ESH savings calculator, data-driven task classification, robot feasibility recommendations, and consumables calculator.",
+            "Designed the pipeline to feed GrayMatter's solutions-engineering agent core and model optimisation workflows.",
+            "Validated pipeline data quality against known reference conditions and human benchmarks."
+          ],
+          result: [
+            "Reduced industrial engineering time studies by approximately 40%.",
+            "Analytics layer enables quantified dollar-value business cases for robot deployment (ESH savings tool).",
+            "Task classification output gives engineering teams a data-backed map of what a robot can and cannot do for a given customer part.",
+            "Produced a reusable, modular platform (DAQ + visualisation + analytics) feeding GrayMatter's process intelligence roadmap."
+          ]
+        }
+      }
     ]
   },
   {
@@ -333,8 +401,53 @@ const EXPERIENCE = [
     location: "San Francisco, CA",
     zone: "cleantech",
     bullets: [
-      "Designed and built a transient hot-wire thermal conductivity measurement system (Raspberry Pi DAQ, custom signal conditioning) achieving <10% uncertainty for metal powder characterisation.",
-      "Designed production-ready skid and modular fuel-cell frame hardware; performed ASME-based preliminary stress analysis and manifold routing for hydrogen/coolant lines."
+      "Designed and built a transient hot-wire thermal conductivity measurement system achieving <10% uncertainty for metal powder characterisation.",
+      "Designed production-ready skid and modular fuel-cell frame hardware; performed ASME-based preliminary stress analysis."
+    ],
+    subprojects: [
+      {
+        title: "Transient Hot-Wire Thermal Conductivity Measurement System",
+        tools: ["Transient Hot-Wire", "Platinum Wire (25μm)", "Signal Conditioning", "Raspberry Pi DAQ", "Python", "SolidWorks", "Uncertainty Analysis"],
+        gallery: [],
+        star: {
+          situation: "Lumindt needed thermal conductivity data for metal powders being evaluated for thermal energy storage. No commercial instrument was suited to the specific material form factor.",
+          task: "Design and build a complete thermal conductivity measurement system from scratch capable of repeatable, accurate characterisation of four metal powder samples.",
+          action: [
+            "Conducted a literature review and selected the transient hot-wire (THW) technique as optimal for loose powder characterisation.",
+            "Designed and fabricated a custom test fixture in SolidWorks housing a 25-micron platinum wire sensor.",
+            "Designed and built signal conditioning circuitry for the platinum wire's resistance-temperature response.",
+            "Built a Raspberry Pi DAQ and wrote Python automation scripts for data capture, thermal cycling, and repeatability analysis.",
+            "Conducted formal uncertainty analysis; investigated effects of porosity and contact resistance on measurement accuracy.",
+            "Established documented, repeatable testing procedures across multiple temperature setpoints."
+          ],
+          result: [
+            "Achieved repeatable thermal conductivity measurements with less than 10% uncertainty across four metal powder samples.",
+            "Enabled material down-selection decisions for Lumindt's thermal energy storage development programme.",
+            "Created a complete characterisation capability from zero — integrating heat transfer theory, precision instrumentation, electronics, and software."
+          ]
+        }
+      },
+      {
+        title: "Structural Design — Electrolyser Skid & Fuel Cell Frame",
+        tools: ["SolidWorks Weldments", "ASME Stress Analysis", "Manifold Design", "Steel Frame", "8020 Extrusions"],
+        gallery: [],
+        star: {
+          situation: "Lumindt needed production-ready structural hardware: a skid for 24 electrolysers (300 kg each) and a modular frame for a 250 kW fuel cell system (200 kg capacity).",
+          task: "Design both structures to meet load requirements, integrate fluid manifolds (hydrogen, coolant, water), minimise footprint, and ensure serviceability — validated against ASME standards.",
+          action: [
+            "Designed the 24-electrolyser skid in SolidWorks Weldments integrating optimised manifold routing for hydrogen, coolant, and water lines.",
+            "Designed the 250 kW fuel cell frame using a welded steel base with carbon steel tubing and 8020 aluminium extrusions for modularity.",
+            "Performed ASME-standard preliminary stress analyses to validate structural safety margins under operating loads.",
+            "Selected balance-of-plant components (pumps, valves, adapters); fabricated custom adapters where off-the-shelf parts did not meet requirements.",
+            "Built an Excel-based heat exchanger and coolant loop calculator to evaluate coolant composition effects on specific heat and efficiency."
+          ],
+          result: [
+            "Delivered production-ready designs for both structures with validated structural safety margins.",
+            "Manifold design met hydrogen, coolant, and water routing requirements within the constrained skid footprint.",
+            "Demonstrated ability to work across mechanical design, structural analysis, fluid systems, and component selection in one workstream."
+          ]
+        }
+      }
     ]
   },
   {
@@ -348,7 +461,24 @@ const EXPERIENCE = [
     bullets: [
       "Programmed and operated Haas CNC, ProtoTRAK, Omax waterjet, and laser cutter; manufactured GD&T-critical parts to ±0.001 inch tolerances.",
       "Fabricated 100+ 3D printed prototypes and provided DFM guidance to reduce iteration cycles for research teams."
-    ]
+    ],
+    star: {
+      situation: "The Makerspace supports 80+ research labs and 12+ design teams at USC who need precision components fabricated beyond student skill level, and DFM guidance to make their designs manufacturable.",
+      task: "Manufacture GD&T-critical components across a range of processes, support prototype development, and provide DFM guidance.",
+      action: [
+        "Programmed and operated Haas CNC Mill and Lathe, ProtoTRAK, Omax waterjet, and laser cutter to manufacture GD&T-critical components.",
+        "Applied first-principles machining: selected cutting speeds, feeds, tool geometry, and fixturing strategy for each material using standard machining equations.",
+        "Used dial indicators to verify dimensional accuracy and surface finish against GD&T callouts — qualifying parts before release.",
+        "Fabricated 100+ 3D-printed prototypes across FDM (PLA), SLA (resin), and carbon fibre-reinforced FDM — including aerodynamic elements for the Formula SAE car.",
+        "Provided DFM consultations: reviewed student designs for machinability and recommended design modifications to reduce iteration cycles."
+      ],
+      result: [
+        "Machined GD&T-critical components to ±0.001 inch tolerances verified by dial indicator.",
+        "Supported 80+ research labs and 12+ design teams.",
+        "Fabricated 100+ prototypes across three 3D printing technologies.",
+        "DFM guidance demonstrably reduced iteration cycles for multiple teams by catching manufacturability issues at the design stage."
+      ]
+    }
   },
   {
     slug: "drcl",
@@ -361,7 +491,23 @@ const EXPERIENCE = [
     bullets: [
       "Designed a Series Elastic Actuator (SEA) module and 8-DOF robotic hand finger assemblies; validated force feedback fidelity on bench tests.",
       "Simulated hand kinematics in MuJoCo and wrote C++ motor driver code for embedded control."
-    ]
+    ],
+    star: {
+      situation: "The lab is developing an 8-DOF robotic hand capable of catching and throwing a basketball at 20 N force — requiring compliant actuation for safe, controllable contact.",
+      task: "Design and prototype the SEA module and rigid finger joints with parallel link mechanism, and validate force feedback fidelity through bench testing.",
+      action: [
+        "Designed 8-DOF finger joint assemblies with parallel link mechanisms in SolidWorks.",
+        "Designed and rapid-prototyped an SEA test fixture for an N20 motor — spring selection, mounting, adhesive strategy, and locking mechanism.",
+        "Performed torque calculations for N20 motor selection and validated output torque and compliance against design targets.",
+        "Wrote C++ motor driver code for low-level motor control.",
+        "Simulated hand kinematics and dynamics in MuJoCo to validate design decisions before hardware build."
+      ],
+      result: [
+        "Produced a functional SEA prototype with validated force feedback fidelity benchmarked against design targets.",
+        "Parallel-link finger joints designed and iterated in SolidWorks; prototypes fabricated and tested.",
+        "Built practical expertise in compliant actuation design, motor sizing, C++ embedded control, and simulation-to-hardware workflows."
+      ]
+    }
   },
   {
     slug: "tutr",
@@ -373,7 +519,44 @@ const EXPERIENCE = [
     zone: "hardware",
     bullets: [
       "Optimized hyperloop chassis weight by 30% using 1D/3D structural analysis in ANSYS and Siemens NX while preserving structural margins."
-    ]
+    ],
+    star: {
+      situation: "TuTr's hyperloop pod chassis needed to be lighter without compromising structural integrity for high-speed travel loads.",
+      task: "Analyse the existing chassis design and identify weight reduction opportunities while maintaining structural safety margins.",
+      action: [
+        "Conducted 1D and 3D structural analyses in ANSYS Mechanical and Siemens NX to identify over-designed sections.",
+        "Proposed targeted material removal and geometry changes; validated each iteration against stress and deflection limits."
+      ],
+      result: [
+        "Optimised chassis weight by 30% while maintaining full structural integrity under operating load cases."
+      ]
+    }
+  },
+  {
+    slug: "niwe",
+    company: "National Institute of Wind Energy (NIWE)",
+    logo: "",
+    role: "Wind Blade Intern",
+    dates: "Jul 2023 – Aug 2023",
+    location: "Chennai, India",
+    zone: "cleantech",
+    bullets: [
+      "Designed a 5.7 m wind turbine blade geometry in SolidWorks and ran ANSYS Mechanical structural simulations across multiple load cases.",
+      "Delivered a complete blade analysis report to the certification department."
+    ],
+    star: {
+      situation: "NIWE's certification department needed a research-grade structural analysis of a 5.7 m wind turbine blade across multiple load cases to support their certification workflow.",
+      task: "Design, analyse, and optimise the blade geometry in SolidWorks and ANSYS Mechanical, evaluating structural performance across defined load cases.",
+      action: [
+        "Designed a 5.7 m wind turbine blade geometry in SolidWorks.",
+        "Ran ANSYS Mechanical structural simulations across multiple load cases (gravity, wind, fatigue representative cases).",
+        "Optimised blade geometry based on simulation results to meet structural performance targets."
+      ],
+      result: [
+        "Delivered a complete blade analysis report to the certification department.",
+        "Gained practical exposure to industrial wind blade design standards and certification workflows."
+      ]
+    }
   }
 ];
 
