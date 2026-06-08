@@ -140,46 +140,43 @@ function renderProjectDetail() {
   if (!page || typeof PROJECTS === 'undefined') return;
 
   const slug = getQuerySlug();
-  const project = PROJECTS.find(item => (item.slug || item.id) === slug) || PROJECTS[0];
+  const project = PROJECTS.find(p => p.slug === slug) || PROJECTS[0];
   if (!project) return;
 
   document.title = `${project.title} — Reeth Kawad`;
-  page.querySelector('[data-project-zone]')?.textContent = zoneLabel(project.zone);
-  page.querySelector('[data-project-title]')?.textContent = project.title;
-  page.querySelector('[data-project-summary]')?.textContent = project.summary;
-  page.querySelector('[data-project-overview]')?.textContent = project.description;
+  page.querySelector('[data-project-zone]').textContent = zoneLabel(project.zone);
+  page.querySelector('[data-project-title]').textContent = project.title;
 
   const heroImg = page.querySelector('[data-project-hero]');
-  const heroSrc = project.gallery?.[0] || project.thumb || project.image || '';
-  if (heroImg && heroSrc) {
-    heroImg.src = heroSrc;
-    heroImg.alt = project.title;
+  const heroSrc = project.gallery?.[0] || project.thumb || '';
+  if (heroImg && heroSrc) { heroImg.src = heroSrc; heroImg.alt = project.title; }
+
+  const star = project.star;
+  if (star) {
+    page.querySelector('[data-project-situation]').textContent = star.situation || '';
+    page.querySelector('[data-project-task]').textContent = star.task || '';
+    page.querySelector('[data-project-action]').innerHTML =
+      (star.action || []).map(a => `<li>${escapeHtml(a)}</li>`).join('');
+    page.querySelector('[data-project-result]').innerHTML =
+      (star.result || []).map(r => `<li>${escapeHtml(r)}</li>`).join('');
   }
 
   const tags = page.querySelector('[data-project-tags]');
-  if (tags) {
-    tags.innerHTML = project.tags.map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join('');
-  }
+  if (tags) tags.innerHTML = (project.tags || []).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('');
 
   const gallery = page.querySelector('[data-project-gallery]');
   if (gallery) {
-    const images = [project.thumb, ...(project.gallery || []), ...(project.images || [])].filter(Boolean);
-    const uniqueImages = [...new Set(images)];
-    gallery.innerHTML = uniqueImages.length
-      ? uniqueImages.map(src => `
-          <figure class="project-figure">
-            <img src="${src}" alt="${project.title}" loading="lazy" />
-          </figure>
-        `).join('')
-      : '<p class="project-empty">Add gallery images to the project object in <code>data/site-data.js</code>.</p>';
+    const images = [...new Set([project.thumb, ...(project.gallery || [])].filter(Boolean))];
+    gallery.innerHTML = images.length
+      ? images.map(src => `<figure class="project-figure"><img src="${src}" alt="${escapeHtml(project.title)}" loading="lazy" /></figure>`).join('')
+      : '<p class="project-empty">No gallery images yet — add image paths to the <code>gallery</code> array in <code>data/site-data.js</code>.</p>';
   }
 
   const links = page.querySelector('[data-project-links]');
   if (links) {
-    const hrefs = project.links || [];
-    links.innerHTML = hrefs.length
-      ? hrefs.map(link => `<a class="detail-link" href="${link.url}" target="_blank" rel="noopener">${escapeHtml(link.label)} ↗</a>`).join('')
-      : '<p class="project-empty">No external links available yet.</p>';
+    links.innerHTML = (project.links || []).length
+      ? project.links.map(l => `<a class="detail-link" href="${l.url}" target="_blank" rel="noopener">${escapeHtml(l.label)} ↗</a>`).join('')
+      : '<p class="project-empty">No external links yet.</p>';
   }
 }
 
