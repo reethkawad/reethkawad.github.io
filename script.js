@@ -52,6 +52,40 @@ function initTyping(targetId, text, speed = 80) {
   tick();
 }
 
+function parseAboutBio(text) {
+  const startMarker = 'Short Bio (Portfolio About Page / LinkedIn Summary)';
+  const endMarker = 'HOW TO USE THIS DOCUMENT';
+  const start = text.indexOf(startMarker);
+  const end = text.indexOf(endMarker);
+  if (start === -1 || end === -1 || end <= start) return [];
+
+  return text
+    .slice(start + startMarker.length, end)
+    .split(/\n\n+/)
+    .map(part => part.trim())
+    .filter(Boolean)
+    .filter(part => !part.toUpperCase().includes('ABOUT ME'))
+    .slice(0, 3);
+}
+
+async function renderAbout() {
+  const aboutText = document.querySelector('.about-text');
+  if (!aboutText) return;
+
+  const fallback = Array.isArray(SITE?.ABOUT?.bio) ? SITE.ABOUT.bio : [];
+
+  try {
+    const response = await fetch('data/doc_text.txt', { cache: 'no-store' });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const text = await response.text();
+    const paragraphs = parseAboutBio(text);
+    const bio = paragraphs.length ? paragraphs : fallback;
+    aboutText.innerHTML = bio.map(paragraph => `<p>${paragraph}</p>`).join('');
+  } catch {
+    aboutText.innerHTML = fallback.map(paragraph => `<p>${paragraph}</p>`).join('');
+  }
+}
+
 // ── Render: Projects ─────────────────────────────────────────
 function renderProjects() {
   const grid = document.getElementById('projects-grid');
@@ -271,6 +305,7 @@ function bindEvents() {
 // ── Init ─────────────────────────────────────────────────────
 function init() {
   initTheme();
+  renderAbout();
   renderProjects();
   renderExperience();
   renderSkills();
