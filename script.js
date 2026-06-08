@@ -206,45 +206,40 @@ function applyFilter(zone) {
 // ── Render: Experience ───────────────────────────────────────
 function renderExperience() {
   const list = document.getElementById('experience-list');
-  if (!list) return;
-
-  if (typeof EXPERIENCE === 'undefined') return;
+  if (!list || typeof EXPERIENCE === 'undefined') return;
 
   list.innerHTML = EXPERIENCE.map(e => {
-    const flowchartHTML = e.flowchart && e.flowchart.length
-      ? `<div class="exp-flowchart">
-           <div class="exp-flowchart-label">Work areas</div>
-           <div class="exp-flowchart-nodes">
-             ${e.flowchart.map((node, i) => `
-               <span class="exp-flowchart-node ${zoneClass(e.zone)}">${node}</span>
-               ${i < e.flowchart.length - 1 ? '<span class="exp-flowchart-arrow">→</span>' : ''}
-             `).join('')}
-           </div>
-         </div>`
+    const subprojectTitles = (e.subprojects || [])
+      .map(sp => `<div class="exp-subproject">▸ ${escapeHtml(sp.title)}</div>`)
+      .join('');
+
+    const toolTags = e.subprojects?.length
+      ? (e.subprojects[0].tools || []).map(t => `<span class="tag tag--small">${escapeHtml(t)}</span>`).join('')
       : '';
 
-    const bulletsHTML = e.bullets?.length
-      ? `<ul class="exp-bullets">${e.bullets.map(b => `<li>${b}</li>`).join('')}</ul>`
+    const bulletsHTML = !e.subprojects?.length && e.bullets?.length
+      ? `<ul class="exp-bullets">${e.bullets.map(b => `<li>${escapeHtml(b)}</li>`).join('')}</ul>`
       : '';
 
     return `
-      <a class="exp-entry exp-entry-link" href="experience/experience.html?slug=${encodeURIComponent(e.slug || slugify(e.company))}" target="_blank" rel="noopener">
+      <a class="exp-entry exp-entry-link" href="experience/experience.html?slug=${encodeURIComponent(e.slug)}" target="_blank" rel="noopener">
         <div class="exp-dot ${zoneClass(e.zone)}"></div>
         <div class="exp-card ${zoneClass(e.zone)}">
           <div class="exp-header">
-            <img src="${e.logo}" alt="${e.company}" class="exp-logo" />
+            ${e.logo ? `<img src="${e.logo}" alt="${escapeHtml(e.company)}" class="exp-logo" />` : ''}
             <div class="exp-left">
-              <span class="exp-company">${e.company}</span>
-              <span class="exp-role">${e.role}</span>
+              <span class="exp-company">${escapeHtml(e.company)}</span>
+              <span class="exp-role">${escapeHtml(e.role)}</span>
             </div>
             <div class="exp-right">
-              <span class="exp-dates">${e.dates}</span>
-              <span class="exp-location">${e.location}</span>
+              <span class="exp-dates">${escapeHtml(e.dates)}</span>
+              <span class="exp-location">${escapeHtml(e.location)}</span>
             </div>
             <span class="zone-badge ${zoneClass(e.zone)}">${zoneLabel(e.zone)}</span>
           </div>
-          ${flowchartHTML}
+          ${subprojectTitles ? `<div class="exp-subprojects">${subprojectTitles}</div>` : ''}
           ${bulletsHTML}
+          ${toolTags ? `<div class="exp-tools">${toolTags}</div>` : ''}
         </div>
       </a>
     `;
