@@ -52,6 +52,26 @@ function initTyping(targetId, text, speed = 80) {
   tick();
 }
 
+function slugify(text) {
+  return String(text)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function escapeHtml(text) {
+  return String(text)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function getQuerySlug() {
+  return new URLSearchParams(window.location.search).get('slug') || '';
+}
+
 function parseAboutBio(text) {
   const startMarker = 'Short Bio (Portfolio About Page / LinkedIn Summary)';
   const endMarker = 'HOW TO USE THIS DOCUMENT';
@@ -124,13 +144,63 @@ function renderProjects() {
 
     // Make the whole card link to a dedicated project page
     const link = document.createElement('a');
-    link.href = `projects/${p.slug || p.id}.html`;
+    link.href = `projects/project.html?slug=${encodeURIComponent(p.slug || p.id)}`;
+    link.target = '_blank';
+    link.rel = 'noopener';
     link.className = 'card-link';
     // Move card content into the link
     link.appendChild(card.cloneNode(true));
     // Append the link to the grid
     grid.appendChild(link);
   });
+}
+
+function renderProjectDetail() {
+  const page = document.querySelector('[data-page-type="project"]');
+  if (!page || typeof PROJECTS === 'undefined') return;
+
+  const slug = getQuerySlug();
+  const project = PROJECTS.find(item => (item.slug || item.id) === slug) || PROJECTS[0];
+  if (!project) return;
+
+  document.title = `${project.title} — Reeth Kawad`;
+  page.querySelector('[data-project-zone]')?.textContent = zoneLabel(project.zone);
+  page.querySelector('[data-project-title]')?.textContent = project.title;
+  page.querySelector('[data-project-summary]')?.textContent = project.summary;
+  page.querySelector('[data-project-overview]')?.textContent = project.description;
+
+  const heroImg = page.querySelector('[data-project-hero]');
+  const heroSrc = project.gallery?.[0] || project.thumb || project.image || '';
+  if (heroImg && heroSrc) {
+    heroImg.src = heroSrc;
+    heroImg.alt = project.title;
+  }
+
+  const tags = page.querySelector('[data-project-tags]');
+  if (tags) {
+    tags.innerHTML = project.tags.map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join('');
+  }
+
+  const gallery = page.querySelector('[data-project-gallery]');
+  if (gallery) {
+    const images = [project.thumb, ...(project.gallery || []), ...(project.images || [])].filter(Boolean);
+    const uniqueImages = [...new Set(images)];
+    gallery.innerHTML = uniqueImages.length
+      ? uniqueImages.map(src => `
+          <figure class="project-figure">
+            <img src="${src}" alt="${project.title}" loading="lazy" />
+          </figure>
+        `).join('')
+      : '<p class="project-empty">Add gallery images to the project object in <code>data/site-data.js</code>.</p>';
+  }
+
+  const links = page.querySelector('[data-project-links]');
+  if (links) {
+    const hrefs = project.links || [];
+    links.innerHTML = hrefs.length
+      ? hrefs.map(link => `<a class="detail-link" href="${link.url}" target="_blank" rel="noopener">${escapeHtml(link.label)} ↗</a>`).join('')
+      : '<p class="project-empty">No external links available yet.</p>';
+  }
 }
 
 // ── Filter Logic ─────────────────────────────────────────────
@@ -180,12 +250,8 @@ function renderExperience() {
       ? `<ul class="exp-bullets">${e.bullets.map(b => `<li>${b}</li>`).join('')}</ul>`
       : '';
 
-    const linksHTML = e.links?.length
-      ? `<div class="exp-links">${e.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener" class="exp-link">${l.label} ↗</a>`).join('')}</div>`
-      : '';
-
     return `
-      <div class="exp-entry">
+      <a class="exp-entry exp-entry-link" href="experience/experience.html?slug=${encodeURIComponent(e.slug || slugify(e.company))}" target="_blank" rel="noopener">
         <div class="exp-dot ${zoneClass(e.zone)}"></div>
         <div class="exp-card ${zoneClass(e.zone)}">
           <div class="exp-header">
@@ -202,41 +268,71 @@ function renderExperience() {
           </div>
           ${flowchartHTML}
           ${bulletsHTML}
-          ${linksHTML}
         </div>
-      </div>
+      </a>
     `;
   }).join('');
+}
+
+function renderExperienceDetail() {
+  const page = document.querySelector('[data-page-type="experience"]');
+  if (!page || typeof EXPERIENCE === 'undefined') return;
+
+  const slug = getQuerySlug();
+  const experience = EXPERIENCE.find(item => (item.slug || slugify(item.company)) === slug) || EXPERIENCE[0];
+  if (!experience) return;
+
+  document.title = `${experience.company} — Reeth Kawad`;
+  page.querySelector('[data-experience-zone]')?.textContent = zoneLabel(experience.zone);
+  page.querySelector('[data-experience-company]')?.textContent = experience.company;
+  page.querySelector('[data-experience-role]')?.textContent = experience.role;
+  page.querySelector('[data-experience-dates]')?.textContent = experience.dates;
+  page.querySelector('[data-experience-location]')?.textContent = experience.location;
+
+  const logo = page.querySelector('[data-experience-logo]');
+  if (logo && experience.logo) {
+    logo.src = experience.logo;
+    logo.alt = experience.company;
+  } else if (logo) {
+    logo.remove();
+  }
+
+  const bullets = page.querySelector('[data-experience-bullets]');
+  if (bullets) {
+    bullets.innerHTML = experience.bullets.map(bullet => `<li>${escapeHtml(bullet)}</li>`).join('');
+  }
+
+  const flowchart = page.querySelector('[data-experience-flowchart]');
+  if (flowchart) {
+    flowchart.innerHTML = experience.flowchart?.length
+      ? experience.flowchart.map((node, index) => `
+          <span class="exp-flowchart-node ${zoneClass(experience.zone)}">${escapeHtml(node)}</span>
+          ${index < experience.flowchart.length - 1 ? '<span class="exp-flowchart-arrow">→</span>' : ''}
+        `).join('')
+      : '<span class="project-empty">Add a flowchart array in <code>data/site-data.js</code> to show work areas.</span>';
+  }
+
+  const links = page.querySelector('[data-experience-links]');
+  if (links) {
+    links.innerHTML = experience.links?.length
+      ? experience.links.map(link => `<a class="detail-link" href="${link.url}" target="_blank" rel="noopener">${escapeHtml(link.label)} ↗</a>`).join('')
+      : '<p class="project-empty">No external links available yet.</p>';
+  }
 }
 
 // ── Render: Skills ───────────────────────────────────────────
 function renderSkills() {
   const tree = document.getElementById('skills-tree');
-  if (!tree) return;
+  if (!tree || typeof SKILLS === 'undefined') return;
 
-  if (typeof SKILLS === 'undefined') return;
-
-  tree.innerHTML = Object.entries(SKILLS).map(([key, zone]) => {
-    const categoriesHTML = zone.categories.map(cat => `
-      <div class="skill-category">
-        <div class="skill-category-label">${cat.label}</div>
-        <div class="skill-nodes">
-          ${cat.items.map(item => `<span class="skill-node">${item}</span>`).join('')}
-        </div>
+  tree.innerHTML = Object.values(SKILLS).map(cat => `
+    <div class="skill-card">
+      <div class="skill-card-label">${cat.label}</div>
+      <div class="skill-nodes">
+        ${cat.items.map(item => `<span class="skill-node">${item}</span>`).join('')}
       </div>
-    `).join('');
-
-    return `
-      <div class="skill-column ${zoneClass(key)}">
-        <div class="skill-column-header">
-          <div class="skill-column-title">
-            <span>${zone.icon}</span> ${zone.label}
-          </div>
-        </div>
-        ${categoriesHTML}
-      </div>
-    `;
-  }).join('');
+    </div>
+  `).join('');
 }
 
 // ── Event Bindings ───────────────────────────────────────────
@@ -306,6 +402,8 @@ function bindEvents() {
 function init() {
   initTheme();
   renderAbout();
+  renderProjectDetail();
+  renderExperienceDetail();
   renderProjects();
   renderExperience();
   renderSkills();

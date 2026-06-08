@@ -14,7 +14,8 @@ const ABOUT = {
   photo: "assets/profile_picture.png",
   email: "kawad@usc.edu",
   linkedin: "https://www.linkedin.com/in/reethkawad/",
-  github: "https://github.com/kawadreeth"
+  github: "https://github.com/kawadreeth",
+  resume: "assets/Reeth_Kawad_CV.pdf"
 };
 
 // Projects (converted from legacy `data/projects.js` format)
@@ -132,6 +133,7 @@ const PROJECTS = [
 // Experience (populated from master career doc)
 const EXPERIENCE = [
   {
+    slug: "graymatter",
     company: "GrayMatter Robotics",
     logo: "",
     role: "Robotics Systems & Applications Intern",
@@ -144,6 +146,7 @@ const EXPERIENCE = [
     ]
   },
   {
+    slug: "lumindt",
     company: "Lumindt Labs",
     logo: "assets/lumindt.JPG",
     role: "Mechanical Engineering Intern",
@@ -156,6 +159,7 @@ const EXPERIENCE = [
     ]
   },
   {
+    slug: "makerspace",
     company: "USC Baum Family Makerspace",
     logo: "assets/machining.jpg",
     role: "Machinist & Fabrication Engineer",
@@ -168,6 +172,7 @@ const EXPERIENCE = [
     ]
   },
   {
+    slug: "drcl",
     company: "USC Dynamic Robotics & Controls Lab",
     logo: "",
     role: "Mechanical Engineer",
@@ -180,6 +185,7 @@ const EXPERIENCE = [
     ]
   },
   {
+    slug: "tutr",
     company: "TuTr Hyperloop",
     logo: "",
     role: "Mechanical Engineer Intern",
@@ -192,31 +198,50 @@ const EXPERIENCE = [
   }
 ];
 
-// Skills (legacy structure preserved)
 const SKILLS = {
-  cleantech: {
-    label: "Cleantech & Energy",
-    icon: "⚡",
-    categories: [
-      { label: "Simulation & Analysis", items: ["ANSYS Fluent", "CFD", "FEA"] },
-      { label: "Domain", items: ["Wind Energy", "Hydrogen Systems"] }
-    ]
+  controls: {
+    label: "Controls & Firmware",
+    items: ["Arduino IDE", "I2C architecture", "State machine design", "PID control", "Bayesian optimisation", "MOSFET braking", "Buck-boost converter", "Embedded C++"]
   },
   robotics: {
-    label: "Robotics & Controls",
-    icon: "🤖",
-    categories: [
-      { label: "Programming", items: ["Python", "MATLAB"] },
-      { label: "Systems", items: ["DAQ", "Sensors"] }
-    ]
+    label: "Robotics",
+    items: ["ROS2", "RVIZ", "FANUC arm programming", "Toolpath planning (CNT/orientation/overlap)", "Point cloud segmentation", "MuJoCo simulation", "Reachability studies"]
   },
-  hardware: {
-    label: "Hardware & Manufacturing",
-    icon: "🔧",
-    categories: [
-      { label: "CAD & Simulation", items: ["SolidWorks", "Siemens NX"] },
-      { label: "Fabrication", items: ["CNC", "3D Printing"] }
-    ]
+  sensing: {
+    label: "Sensing & DAQ",
+    items: ["Force sensors", "IMUs", "OpenVR position tracking", "Thermal sensors", "Transient hot-wire", "Multimodal sync 100+ Hz", "Signal conditioning", "Rerun visualisation", "LabVIEW"]
+  },
+  mechanical: {
+    label: "Mechanical Design",
+    items: ["SolidWorks", "Siemens NX", "Fusion 360", "GD&T", "DFM", "Compliant mechanisms", "SEA design", "Parallel link mechanisms", "Weldment design"]
+  },
+  simulation: {
+    label: "Simulation & Analysis",
+    items: ["ANSYS Mechanical FEA", "ANSYS Fluent CFD", "MuJoCo", "QBlade", "StarCCM+", "MATLAB/Simulink", "FLORIS wake optimiser"]
+  },
+  manufacturing: {
+    label: "Manufacturing",
+    items: ["Haas CNC Mill & Lathe", "ProtoTRAK", "Omax Waterjet", "Laser Cutter", "MasterCam", "FDM/SLA/Carbon Fibre 3D Printing", "Composite Layup", "Resin Infusion", "±0.001\" tolerancing"]
+  },
+  thermofluids: {
+    label: "Thermofluids",
+    items: ["Transient hot-wire method", "Heat exchanger design", "Coolant loop analysis", "Fluid dynamics", "CFD (Fluent)", "Thermal management", "Hydrogen system thermal characterisation"]
+  },
+  structural: {
+    label: "Structural",
+    items: ["ASME stress analysis", "Weldment structural calc", "Chassis optimisation", "Blade load case analysis", "1D & 3D FEA"]
+  },
+  software: {
+    label: "Software & Scripting",
+    items: ["Python", "MATLAB", "C++", "Arduino", "ROS2", "YAML/JSON", "GitHub", "LabVIEW"]
+  },
+  energy: {
+    label: "Energy Systems",
+    items: ["Wind turbine controls & design", "FLORIS farm optimisation", "QBlade/StarCCM+ blade aero", "Thermal energy storage", "Electrolyser & fuel cell systems", "Hydrogen gas handling"]
+  },
+  leadership: {
+    label: "Leadership & Entrepreneurship",
+    items: ["Team founding & management", "Cross-functional stakeholder coordination", "Customer discovery", "Pitch competitions", "Partnership development", "Chapter founding (AEE USC)"]
   }
 };
 
