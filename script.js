@@ -398,9 +398,20 @@ function bindEvents() {
   });
 }
 
+// ── Resume / CV ──────────────────────────────────────────────
+function initResume() {
+  const resume = window.SITE?.ABOUT?.resume;
+  if (!resume) return;
+  const navLink     = document.getElementById('nav-cv-link');
+  const contactLink = document.getElementById('contact-cv-link');
+  if (navLink)     { navLink.href     = resume; navLink.style.display     = ''; }
+  if (contactLink) { contactLink.href = resume; contactLink.style.display = ''; }
+}
+
 // ── Init ─────────────────────────────────────────────────────
 function init() {
   initTheme();
+  initResume();
   renderAbout();
   renderProjectDetail();
   renderExperienceDetail();
