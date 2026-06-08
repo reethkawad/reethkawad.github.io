@@ -251,44 +251,67 @@ function renderExperienceDetail() {
   if (!page || typeof EXPERIENCE === 'undefined') return;
 
   const slug = getQuerySlug();
-  const experience = EXPERIENCE.find(item => (item.slug || slugify(item.company)) === slug) || EXPERIENCE[0];
-  if (!experience) return;
+  const exp = EXPERIENCE.find(e => e.slug === slug) || EXPERIENCE[0];
+  if (!exp) return;
 
-  document.title = `${experience.company} — Reeth Kawad`;
-  page.querySelector('[data-experience-zone]')?.textContent = zoneLabel(experience.zone);
-  page.querySelector('[data-experience-company]')?.textContent = experience.company;
-  page.querySelector('[data-experience-role]')?.textContent = experience.role;
-  page.querySelector('[data-experience-dates]')?.textContent = experience.dates;
-  page.querySelector('[data-experience-location]')?.textContent = experience.location;
+  document.title = `${exp.company} — Reeth Kawad`;
+  page.querySelector('[data-experience-zone]').textContent = zoneLabel(exp.zone);
+  page.querySelector('[data-experience-company]').textContent = exp.company;
+  page.querySelector('[data-experience-role]').textContent = exp.role;
+  page.querySelector('[data-experience-dates]').textContent = exp.dates;
+  page.querySelector('[data-experience-location]').textContent = exp.location;
 
   const logo = page.querySelector('[data-experience-logo]');
-  if (logo && experience.logo) {
-    logo.src = experience.logo;
-    logo.alt = experience.company;
-  } else if (logo) {
-    logo.remove();
+  if (logo && exp.logo) { logo.src = exp.logo; logo.alt = exp.company; }
+  else if (logo) { logo.style.display = 'none'; }
+
+  const body = page.querySelector('[data-experience-body]');
+  if (!body) return;
+
+  function starHTML(star) {
+    if (!star) return '';
+    return `
+      <div class="star-sections">
+        <div class="star-section">
+          <div class="star-label">Situation</div>
+          <p>${escapeHtml(star.situation || '')}</p>
+        </div>
+        <div class="star-section">
+          <div class="star-label">Task</div>
+          <p>${escapeHtml(star.task || '')}</p>
+        </div>
+        <div class="star-section">
+          <div class="star-label">Action</div>
+          <ul class="detail-list">${(star.action || []).map(a => `<li>${escapeHtml(a)}</li>`).join('')}</ul>
+        </div>
+        <div class="star-section">
+          <div class="star-label">Results</div>
+          <ul class="detail-list detail-list--result">${(star.result || []).map(r => `<li>${escapeHtml(r)}</li>`).join('')}</ul>
+        </div>
+      </div>`;
   }
 
-  const bullets = page.querySelector('[data-experience-bullets]');
-  if (bullets) {
-    bullets.innerHTML = experience.bullets.map(bullet => `<li>${escapeHtml(bullet)}</li>`).join('');
-  }
-
-  const flowchart = page.querySelector('[data-experience-flowchart]');
-  if (flowchart) {
-    flowchart.innerHTML = experience.flowchart?.length
-      ? experience.flowchart.map((node, index) => `
-          <span class="exp-flowchart-node ${zoneClass(experience.zone)}">${escapeHtml(node)}</span>
-          ${index < experience.flowchart.length - 1 ? '<span class="exp-flowchart-arrow">→</span>' : ''}
-        `).join('')
-      : '<span class="project-empty">Add a flowchart array in <code>data/site-data.js</code> to show work areas.</span>';
-  }
-
-  const links = page.querySelector('[data-experience-links]');
-  if (links) {
-    links.innerHTML = experience.links?.length
-      ? experience.links.map(link => `<a class="detail-link" href="${link.url}" target="_blank" rel="noopener">${escapeHtml(link.label)} ↗</a>`).join('')
-      : '<p class="project-empty">No external links available yet.</p>';
+  if (exp.subprojects?.length) {
+    body.innerHTML = exp.subprojects.map(sp => `
+      <details class="subproject" open>
+        <summary class="subproject-header">
+          <span class="subproject-title">${escapeHtml(sp.title)}</span>
+          <div class="subproject-tools">
+            ${(sp.tools || []).map(t => `<span class="tag tag--small">${escapeHtml(t)}</span>`).join('')}
+          </div>
+        </summary>
+        <div class="subproject-body">
+          ${starHTML(sp.star)}
+          ${sp.gallery?.length ? `
+            <div class="project-gallery" style="margin-top:1rem;">
+              ${sp.gallery.map(src => `<figure class="project-figure"><img src="${src}" alt="${escapeHtml(sp.title)}" loading="lazy" /></figure>`).join('')}
+            </div>` : ''}
+        </div>
+      </details>
+    `).join('');
+  } else {
+    body.innerHTML = starHTML(exp.star)
+      || `<ul class="detail-list">${(exp.bullets || []).map(b => `<li>${escapeHtml(b)}</li>`).join('')}</ul>`;
   }
 }
 
