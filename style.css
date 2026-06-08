@@ -942,9 +942,9 @@ section {
 }
 
 .skill-node:hover {
-  color: var(--zone);
-  border-color: var(--zone);
-  background: color-mix(in srgb, var(--zone) 8%, transparent);
+  color: var(--zone, var(--zone-robotics));
+  border-color: var(--zone, var(--zone-robotics));
+  background: color-mix(in srgb, var(--zone, var(--zone-robotics)) 8%, transparent);
 }
 
 /* ── Contact ────────────────────────────────────────────────── */
