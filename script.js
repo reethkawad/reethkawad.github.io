@@ -109,48 +109,28 @@ async function renderAbout() {
 // ── Render: Projects ─────────────────────────────────────────
 function renderProjects() {
   const grid = document.getElementById('projects-grid');
-  if (!grid) return;
+  if (!grid || typeof PROJECTS === 'undefined') return;
   grid.innerHTML = '';
 
-  if (typeof PROJECTS === 'undefined') return;
-
   PROJECTS.forEach(p => {
+    const link = document.createElement('a');
+    link.href = `projects/project.html?slug=${encodeURIComponent(p.slug)}`;
+    link.className = `project-card ${zoneClass(p.zone)}`;
+    link.dataset.zone = p.zone;
+    link.setAttribute('role', 'listitem');
+    link.setAttribute('aria-label', p.title);
 
-    const card = document.createElement('article');
-    card.className = `project-card ${zoneClass(p.zone)}`;
-    card.dataset.zone = p.zone;
-    card.dataset.id   = p.id;
-    card.setAttribute('role', 'listitem');
-    card.setAttribute('tabindex', '0');
-    card.setAttribute('aria-label', p.title);
-
-    // Determine image property name depending on source
-    const imgSrc = p.thumb || p.image || '';
-
-    card.innerHTML = `
-      <img class="card-image" src="${imgSrc}" alt="${p.title}" loading="lazy" />
+    link.innerHTML = `
+      <img class="card-image" src="${p.thumb || ''}" alt="${escapeHtml(p.title)}" loading="lazy" />
       <div class="card-body">
-        <div class="card-meta">
-          <span class="zone-badge ${zoneClass(p.zone)}">${zoneLabel(p.zone)}</span>
-          ${p.status === 'ongoing' ? '<span class="status-badge ongoing">Ongoing</span>' : ''}
-        </div>
-        <h3 class="card-title">${p.title}</h3>
-        <p class="card-summary">${p.summary}</p>
+        <span class="zone-badge ${zoneClass(p.zone)}">${zoneLabel(p.zone)}</span>
+        <h3 class="card-title">${escapeHtml(p.title)}</h3>
         <div class="card-tags">
-          ${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}
+          ${(p.tags || []).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}
         </div>
       </div>
     `;
 
-    // Make the whole card link to a dedicated project page
-    const link = document.createElement('a');
-    link.href = `projects/project.html?slug=${encodeURIComponent(p.slug || p.id)}`;
-    link.target = '_blank';
-    link.rel = 'noopener';
-    link.className = 'card-link';
-    // Move card content into the link
-    link.appendChild(card.cloneNode(true));
-    // Append the link to the grid
     grid.appendChild(link);
   });
 }
